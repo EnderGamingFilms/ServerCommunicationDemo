@@ -79,6 +79,12 @@ public class MessageBuilder {
                 .build();
     }
 
+    public static Communication.PlayerStatsRequest buildPlayerStatsRequest(UUID uuid, String name) {
+        return Communication.PlayerStatsRequest.newBuilder()
+                .setPlayer(buildPlayer(uuid, name))
+                .build();
+    }
+
     public static UUID toJavaUUID(Communication.UUID uuid) {
         return new UUID(uuid.getMostSignificantBits(), uuid.getLeastSignificantBits());
     }

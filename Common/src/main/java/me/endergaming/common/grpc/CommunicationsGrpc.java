@@ -27,31 +27,31 @@ public final class CommunicationsGrpc {
   public static final String SERVICE_NAME = "Communications";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Player,
+  private static volatile io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.PlayerStatsRequest,
       me.endergaming.common.grpc.Communication.Stats> getGetStatsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getStats",
-      requestType = me.endergaming.common.grpc.Communication.Player.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetStats",
+      requestType = me.endergaming.common.grpc.Communication.PlayerStatsRequest.class,
       responseType = me.endergaming.common.grpc.Communication.Stats.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Player,
+  public static io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.PlayerStatsRequest,
       me.endergaming.common.grpc.Communication.Stats> getGetStatsMethod() {
-    io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Player, me.endergaming.common.grpc.Communication.Stats> getGetStatsMethod;
+    io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.PlayerStatsRequest, me.endergaming.common.grpc.Communication.Stats> getGetStatsMethod;
     if ((getGetStatsMethod = CommunicationsGrpc.getGetStatsMethod) == null) {
       synchronized (CommunicationsGrpc.class) {
         if ((getGetStatsMethod = CommunicationsGrpc.getGetStatsMethod) == null) {
           CommunicationsGrpc.getGetStatsMethod = getGetStatsMethod = 
-              io.grpc.MethodDescriptor.<me.endergaming.common.grpc.Communication.Player, me.endergaming.common.grpc.Communication.Stats>newBuilder()
+              io.grpc.MethodDescriptor.<me.endergaming.common.grpc.Communication.PlayerStatsRequest, me.endergaming.common.grpc.Communication.Stats>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "Communications", "getStats"))
+                  "Communications", "GetStats"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  me.endergaming.common.grpc.Communication.Player.getDefaultInstance()))
+                  me.endergaming.common.grpc.Communication.PlayerStatsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   me.endergaming.common.grpc.Communication.Stats.getDefaultInstance()))
-                  .setSchemaDescriptor(new CommunicationsMethodDescriptorSupplier("getStats"))
+                  .setSchemaDescriptor(new CommunicationsMethodDescriptorSupplier("GetStats"))
                   .build();
           }
         }
@@ -59,43 +59,11 @@ public final class CommunicationsGrpc {
      return getGetStatsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Text,
-      me.endergaming.common.grpc.Communication.Stats> getGetStatsByNameMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getStatsByName",
-      requestType = me.endergaming.common.grpc.Communication.Text.class,
-      responseType = me.endergaming.common.grpc.Communication.Stats.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Text,
-      me.endergaming.common.grpc.Communication.Stats> getGetStatsByNameMethod() {
-    io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Text, me.endergaming.common.grpc.Communication.Stats> getGetStatsByNameMethod;
-    if ((getGetStatsByNameMethod = CommunicationsGrpc.getGetStatsByNameMethod) == null) {
-      synchronized (CommunicationsGrpc.class) {
-        if ((getGetStatsByNameMethod = CommunicationsGrpc.getGetStatsByNameMethod) == null) {
-          CommunicationsGrpc.getGetStatsByNameMethod = getGetStatsByNameMethod = 
-              io.grpc.MethodDescriptor.<me.endergaming.common.grpc.Communication.Text, me.endergaming.common.grpc.Communication.Stats>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "Communications", "getStatsByName"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  me.endergaming.common.grpc.Communication.Text.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  me.endergaming.common.grpc.Communication.Stats.getDefaultInstance()))
-                  .setSchemaDescriptor(new CommunicationsMethodDescriptorSupplier("getStatsByName"))
-                  .build();
-          }
-        }
-     }
-     return getGetStatsByNameMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Empty,
       me.endergaming.common.grpc.Communication.Server_Info> getGetServerInfoMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getServerInfo",
+      fullMethodName = SERVICE_NAME + '/' + "GetServerInfo",
       requestType = me.endergaming.common.grpc.Communication.Empty.class,
       responseType = me.endergaming.common.grpc.Communication.Server_Info.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
@@ -109,13 +77,13 @@ public final class CommunicationsGrpc {
               io.grpc.MethodDescriptor.<me.endergaming.common.grpc.Communication.Empty, me.endergaming.common.grpc.Communication.Server_Info>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "Communications", "getServerInfo"))
+                  "Communications", "GetServerInfo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   me.endergaming.common.grpc.Communication.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   me.endergaming.common.grpc.Communication.Server_Info.getDefaultInstance()))
-                  .setSchemaDescriptor(new CommunicationsMethodDescriptorSupplier("getServerInfo"))
+                  .setSchemaDescriptor(new CommunicationsMethodDescriptorSupplier("GetServerInfo"))
                   .build();
           }
         }
@@ -152,16 +120,9 @@ public final class CommunicationsGrpc {
 
     /**
      */
-    public void getStats(me.endergaming.common.grpc.Communication.Player request,
+    public void getStats(me.endergaming.common.grpc.Communication.PlayerStatsRequest request,
         io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.Stats> responseObserver) {
       asyncUnimplementedUnaryCall(getGetStatsMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getStatsByName(me.endergaming.common.grpc.Communication.Text request,
-        io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.Stats> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetStatsByNameMethod(), responseObserver);
     }
 
     /**
@@ -177,16 +138,9 @@ public final class CommunicationsGrpc {
             getGetStatsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                me.endergaming.common.grpc.Communication.Player,
+                me.endergaming.common.grpc.Communication.PlayerStatsRequest,
                 me.endergaming.common.grpc.Communication.Stats>(
                   this, METHODID_GET_STATS)))
-          .addMethod(
-            getGetStatsByNameMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                me.endergaming.common.grpc.Communication.Text,
-                me.endergaming.common.grpc.Communication.Stats>(
-                  this, METHODID_GET_STATS_BY_NAME)))
           .addMethod(
             getGetServerInfoMethod(),
             asyncUnaryCall(
@@ -218,18 +172,10 @@ public final class CommunicationsGrpc {
 
     /**
      */
-    public void getStats(me.endergaming.common.grpc.Communication.Player request,
+    public void getStats(me.endergaming.common.grpc.Communication.PlayerStatsRequest request,
         io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.Stats> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetStatsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getStatsByName(me.endergaming.common.grpc.Communication.Text request,
-        io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.Stats> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetStatsByNameMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -261,16 +207,9 @@ public final class CommunicationsGrpc {
 
     /**
      */
-    public me.endergaming.common.grpc.Communication.Stats getStats(me.endergaming.common.grpc.Communication.Player request) {
+    public me.endergaming.common.grpc.Communication.Stats getStats(me.endergaming.common.grpc.Communication.PlayerStatsRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetStatsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public me.endergaming.common.grpc.Communication.Stats getStatsByName(me.endergaming.common.grpc.Communication.Text request) {
-      return blockingUnaryCall(
-          getChannel(), getGetStatsByNameMethod(), getCallOptions(), request);
     }
 
     /**
@@ -302,17 +241,9 @@ public final class CommunicationsGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<me.endergaming.common.grpc.Communication.Stats> getStats(
-        me.endergaming.common.grpc.Communication.Player request) {
+        me.endergaming.common.grpc.Communication.PlayerStatsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetStatsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<me.endergaming.common.grpc.Communication.Stats> getStatsByName(
-        me.endergaming.common.grpc.Communication.Text request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetStatsByNameMethod(), getCallOptions()), request);
     }
 
     /**
@@ -325,8 +256,7 @@ public final class CommunicationsGrpc {
   }
 
   private static final int METHODID_GET_STATS = 0;
-  private static final int METHODID_GET_STATS_BY_NAME = 1;
-  private static final int METHODID_GET_SERVER_INFO = 2;
+  private static final int METHODID_GET_SERVER_INFO = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -346,11 +276,7 @@ public final class CommunicationsGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_STATS:
-          serviceImpl.getStats((me.endergaming.common.grpc.Communication.Player) request,
-              (io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.Stats>) responseObserver);
-          break;
-        case METHODID_GET_STATS_BY_NAME:
-          serviceImpl.getStatsByName((me.endergaming.common.grpc.Communication.Text) request,
+          serviceImpl.getStats((me.endergaming.common.grpc.Communication.PlayerStatsRequest) request,
               (io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.Stats>) responseObserver);
           break;
         case METHODID_GET_SERVER_INFO:
@@ -419,7 +345,6 @@ public final class CommunicationsGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CommunicationsFileDescriptorSupplier())
               .addMethod(getGetStatsMethod())
-              .addMethod(getGetStatsByNameMethod())
               .addMethod(getGetServerInfoMethod())
               .build();
         }

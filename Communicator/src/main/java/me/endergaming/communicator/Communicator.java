@@ -10,6 +10,7 @@ import com.google.gson.JsonObject;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import lombok.SneakyThrows;
+import me.endergaming.common.MessageBuilder;
 import me.endergaming.common.Stats;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -152,11 +153,13 @@ public final class Communicator extends JavaPlugin implements Listener {
     public void onJoin(PlayerJoinEvent e) {
         Stats stats = this.dataCache.get(e.getPlayer().getUniqueId());
 
-        UUID uuid = e.getPlayer().getUniqueId();
-        this.getLogger().log(Level.INFO, "Most Sig: " + uuid.getMostSignificantBits());
-        this.getLogger().log(Level.INFO, "Least Sig: " + uuid.getLeastSignificantBits());
-
         stats.setJoins(stats.getJoins() + 1);
+
+        UUID uuid = e.getPlayer().getUniqueId();
+
+        System.out.println("M: " + uuid.getMostSignificantBits());
+        System.out.println("L: " + uuid.getLeastSignificantBits());
+        System.out.println("Created: " + MessageBuilder.buildUUID(uuid));
     }
 
     @SneakyThrows

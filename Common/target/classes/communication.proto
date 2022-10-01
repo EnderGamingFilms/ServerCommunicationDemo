@@ -4,9 +4,8 @@ option java_package = "me.endergaming.common.grpc";
 //option java_multiple_files = true;
 
 service Communications {
-    rpc getStats(Player) returns (Stats);
-    rpc getStatsByName(Text) returns (Stats);
-    rpc getServerInfo(Empty) returns (Server_Info);
+    rpc GetStats(PlayerStatsRequest) returns (Stats);
+    rpc GetServerInfo(Empty) returns (Server_Info);
 }
 
 
@@ -49,6 +48,10 @@ message Server_Info {
     sint32 online_players = 1;
     sint32 max_players = 2;
     string name = 3;
+}
+
+message PlayerStatsRequest {
+    Player player = 1;
 }
 
 message Empty {}

@@ -5,6 +5,7 @@ me\endergaming\common\grpc\Communication$UUID$Builder.class
 me\endergaming\common\grpc\Communication$TextOrBuilder.class
 me\endergaming\common\grpc\Communication$Stats$Builder.class
 me\endergaming\common\grpc\CommunicationsGrpc$CommunicationsStub.class
+me\endergaming\common\Stats$StatsAdapter.class
 me\endergaming\common\grpc\Communication$Stats$1.class
 me\endergaming\common\grpc\Communication$PlayerOrBuilder.class
 me\endergaming\common\grpc\Communication$Typed_Kill.class

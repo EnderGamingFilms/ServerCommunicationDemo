@@ -1,0 +1,5 @@
+name: Communicator
+version: '${project.version}'
+main: me.endergaming.communicator.Communicator
+api-version: 1.18
+authors: [ ItWasEnder ]

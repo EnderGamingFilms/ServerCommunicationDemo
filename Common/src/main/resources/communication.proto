@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option java_package = "me.endergaming.common.grpc";
+//option java_multiple_files = true;
+
+service Communications {
+    rpc getStats(Player) returns (Stats);
+    rpc getServerInfo(Empty) returns (Server_Info);
+}
+
+
+message UUID {
+    sint64 mostSignificantBits = 1;
+    sint64 leastSignificantBits = 2;
+}
+
+message Player {
+    UUID uuid = 1;
+    string name = 2;
+}
+
+message Stats {
+    Kills kills = 1;
+    sint32 deaths = 2;
+    sint32 blocks_placed = 3;
+    sint32 blocked_mined = 4;
+    sint32 joins = 5;
+    double damage_dealt = 6;
+    double damage_taken = 7;
+    sint32 items_dropped = 8;
+}
+
+message Typed_Kill {
+    string type = 1;
+    sint32 amount = 2;
+}
+
+message Kills {
+    sint32 total = 1;
+    repeated Typed_Kill typed = 2;
+}
+
+message Server_Info {
+    sint32 online_players = 1;
+    sint32 max_players = 2;
+    string name = 3;
+}
+
+message Empty {}

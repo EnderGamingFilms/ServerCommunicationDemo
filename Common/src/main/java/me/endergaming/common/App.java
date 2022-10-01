@@ -29,9 +29,11 @@ public class App {
 
         System.out.println("\n");
 
+        UUID toUse = UUID.fromString("269ddc20-206a-48da-9167-877c562054f2");
+
         long start_1 = System.currentTimeMillis();
 
-        Communication.Stats stats = stub.getStats(MessageBuilder.buildPlayer(UUID.fromString("269ddc20-206a-48da-9167-877c562054f2"), "ItWasEnder"));
+        Communication.Stats stats = stub.getStats(MessageBuilder.buildPlayer(toUse, "ItWasEnder"));
 
         long end_1 = System.currentTimeMillis();
 

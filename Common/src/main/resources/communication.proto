@@ -5,6 +5,7 @@ option java_package = "me.endergaming.common.grpc";
 
 service Communications {
     rpc getStats(Player) returns (Stats);
+    rpc getStatsByName(Text) returns (Stats);
     rpc getServerInfo(Empty) returns (Server_Info);
 }
 
@@ -12,6 +13,10 @@ service Communications {
 message UUID {
     sint64 mostSignificantBits = 1;
     sint64 leastSignificantBits = 2;
+}
+
+message Text {
+    string text = 1;
 }
 
 message Player {

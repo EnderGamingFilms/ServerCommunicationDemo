@@ -2,6 +2,7 @@ me\endergaming\common\grpc\CommunicationsGrpc$CommunicationsMethodDescriptorSupp
 me\endergaming\common\grpc\Communication.class
 me\endergaming\common\grpc\Communication$Stats.class
 me\endergaming\common\grpc\Communication$UUID$Builder.class
+me\endergaming\common\grpc\Communication$TextOrBuilder.class
 me\endergaming\common\grpc\Communication$Stats$Builder.class
 me\endergaming\common\grpc\CommunicationsGrpc$CommunicationsStub.class
 me\endergaming\common\grpc\Communication$Stats$1.class
@@ -18,12 +19,14 @@ me\endergaming\common\grpc\Communication$Kills.class
 me\endergaming\common\grpc\CommunicationsGrpc$CommunicationsFileDescriptorSupplier.class
 me\endergaming\common\MessageBuilder.class
 me\endergaming\common\grpc\Communication$1.class
+me\endergaming\common\grpc\Communication$Text.class
 me\endergaming\common\grpc\CommunicationsGrpc.class
 me\endergaming\common\grpc\CommunicationsGrpc$MethodHandlers.class
 me\endergaming\common\grpc\Communication$Typed_Kill$Builder.class
 me\endergaming\common\grpc\Communication$UUID$1.class
 me\endergaming\common\grpc\Communication$Empty$Builder.class
 me\endergaming\common\grpc\CommunicationsGrpc$CommunicationsBlockingStub.class
+me\endergaming\common\grpc\Communication$Text$Builder.class
 me\endergaming\common\grpc\Communication$Kills$Builder.class
 me\endergaming\common\grpc\Communication$Kills$1.class
 me\endergaming\common\grpc\CommunicationsGrpc$CommunicationsFutureStub.class
@@ -32,6 +35,7 @@ me\endergaming\common\grpc\Communication$Server_Info.class
 me\endergaming\common\grpc\Communication$Typed_Kill$1.class
 me\endergaming\common\grpc\Communication$Typed_KillOrBuilder.class
 me\endergaming\common\grpc\Communication$UUID.class
+me\endergaming\common\grpc\Communication$Text$1.class
 me\endergaming\common\grpc\Communication$Server_InfoOrBuilder.class
 me\endergaming\common\grpc\Communication$UUIDOrBuilder.class
 me\endergaming\common\Stats.class

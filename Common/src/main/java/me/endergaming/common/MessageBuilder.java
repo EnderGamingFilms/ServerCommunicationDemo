@@ -73,6 +73,12 @@ public class MessageBuilder {
                 .build();
     }
 
+    public static Communication.Text buildText(String text) {
+        return Communication.Text.newBuilder()
+                .setText(text)
+                .build();
+    }
+
     public static UUID toJavaUUID(Communication.UUID uuid) {
         return new UUID(uuid.getMostSignificantBits(), uuid.getLeastSignificantBits());
     }

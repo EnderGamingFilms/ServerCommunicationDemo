@@ -17,20 +17,35 @@ public class App {
 
         CommunicationsGrpc.CommunicationsBlockingStub stub = CommunicationsGrpc.newBlockingStub(channel);
 
-        new Thread(() -> {
-            while (true) {
-                System.out.println("\n\n\n\n\n\n\n\n------------------------------------------------------");
-                System.out.flush();
+        UUID toUse = UUID.fromString("269ddc20-206a-48da-9167-877c562054f2");
 
-                pollServer(stub);
+        System.out.printf("%d \n%d%n", toUse.getLeastSignificantBits(), toUse.getMostSignificantBits());
 
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+        Communication.UUID id = MessageBuilder.buildUUID(toUse.getLeastSignificantBits(), toUse.getMostSignificantBits());
+
+        System.out.printf("\n\n%d \n%d%n", id.getLeastSignificantBits(), id.getMostSignificantBits());
+
+        Communication.Player player = MessageBuilder.buildPlayer(toUse, "ItWasEnder");
+
+        Communication.Stats stats = stub.getStats(Communication.PlayerStatsRequest.newBuilder().setPlayer(player).build());
+
+        System.out.println(stats);
+
+
+//        new Thread(() -> {
+//            while (true) {
+//                System.out.println("\n\n\n\n\n\n\n\n------------------------------------------------------");
+//                System.out.flush();
+//
+//                pollServer(stub);
+//
+//                try {
+//                    Thread.sleep(5000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }).start();
     }
 
     private static void pollServer(CommunicationsGrpc.CommunicationsBlockingStub stub) {

@@ -29,6 +29,19 @@ public class Stats {
         this.killsMap.put(type, total);
     }
 
+    public String toString() {
+        return "Stats{" +
+               "killsMap=" + this.killsMap +
+               ", joins=" + this.joins +
+               ", damageDealt=" + this.damageDealt +
+               ", damageTaken=" + this.damageTaken +
+               ", blocksMined=" + this.blocksMined +
+               ", blocksPlaced=" + this.blocksPlaced +
+               ", deaths=" + this.deaths +
+               ", itemsDropped=" + this.itemsDropped +
+               '}';
+    }
+
     public static class StatsAdapter extends TypeAdapter<Stats> {
 
         @Override

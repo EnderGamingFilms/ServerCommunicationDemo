@@ -14,11 +14,10 @@ public class CommunicationImpl extends CommunicationsGrpc.CommunicationsImplBase
     public void getStats(Communication.PlayerStatsRequest request, StreamObserver<Communication.Stats> responseObserver) {
         UUID playerId = MessageBuilder.toJavaUUID(request.getPlayer().getUuid());
 
-        if (Bukkit.getPlayer(playerId) == null) {
-            System.out.println("Failed to find with UUID");
-            System.out.println("Received: " + request.getPlayer().getUuid());
-            playerId = Bukkit.getOfflinePlayer(request.getPlayer().getName()).getUniqueId();
-        }
+        UUID id = new UUID(request.getPlayer().getUuid().getMostSignificantBits(), request.getPlayer().getUuid().getLeastSignificantBits());
+
+        System.out.println("Expected: " + "269ddc20-206a-48da-9167-877c562054f2");
+        System.out.println("Received: " + playerId);
 
         Communication.Stats stats = MessageBuilder.buildStats(Communicator.getInstance().getStats(playerId));
 

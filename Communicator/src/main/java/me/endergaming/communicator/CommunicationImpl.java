@@ -5,6 +5,7 @@ import me.endergaming.common.MessageBuilder;
 import me.endergaming.common.grpc.Communication;
 import me.endergaming.common.grpc.CommunicationsGrpc;
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.Server;
 
 import java.util.UUID;
@@ -14,10 +15,13 @@ public class CommunicationImpl extends CommunicationsGrpc.CommunicationsImplBase
     public void getStats(Communication.PlayerStatsRequest request, StreamObserver<Communication.Stats> responseObserver) {
         UUID playerId = MessageBuilder.toJavaUUID(request.getPlayer().getUuid());
 
-        UUID id = new UUID(request.getPlayer().getUuid().getMostSignificantBits(), request.getPlayer().getUuid().getLeastSignificantBits());
+        if (Bukkit.getOfflinePlayer(playerId).getName() == null) {
+            OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(request.getPlayer().getName());
 
-        System.out.println("Expected: " + "269ddc20-206a-48da-9167-877c562054f2");
-        System.out.println("Received: " + playerId);
+            if (offlinePlayer.hasPlayedBefore()) {
+                playerId = offlinePlayer.getUniqueId();
+            }
+        }
 
         Communication.Stats stats = MessageBuilder.buildStats(Communicator.getInstance().getStats(playerId));
 

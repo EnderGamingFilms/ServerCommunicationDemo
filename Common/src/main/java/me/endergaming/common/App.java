@@ -17,35 +17,20 @@ public class App {
 
         CommunicationsGrpc.CommunicationsBlockingStub stub = CommunicationsGrpc.newBlockingStub(channel);
 
-        UUID toUse = UUID.fromString("269ddc20-206a-48da-9167-877c562054f2");
+        new Thread(() -> {
+            while (true) {
+                System.out.println("\n\n\n\n\n\n\n\n------------------------------------------------------");
+                System.out.flush();
 
-        System.out.printf("%d \n%d%n", toUse.getLeastSignificantBits(), toUse.getMostSignificantBits());
+                pollServer(stub);
 
-        Communication.UUID id = MessageBuilder.buildUUID(toUse.getLeastSignificantBits(), toUse.getMostSignificantBits());
-
-        System.out.printf("\n\n%d \n%d%n", id.getLeastSignificantBits(), id.getMostSignificantBits());
-
-        Communication.Player player = MessageBuilder.buildPlayer(toUse, "ItWasEnder");
-
-        Communication.Stats stats = stub.getStats(Communication.PlayerStatsRequest.newBuilder().setPlayer(player).build());
-
-        System.out.println(stats);
-
-
-//        new Thread(() -> {
-//            while (true) {
-//                System.out.println("\n\n\n\n\n\n\n\n------------------------------------------------------");
-//                System.out.flush();
-//
-//                pollServer(stub);
-//
-//                try {
-//                    Thread.sleep(5000);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }).start();
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     private static void pollServer(CommunicationsGrpc.CommunicationsBlockingStub stub) {
@@ -74,7 +59,7 @@ public class App {
                 stats.getBlockedMined(), stats.getBlocksPlaced(), stats.getItemsDropped(), stats.getDamageDealt(), stats.getDamageTaken(), stats.getDeaths(), stats.getJoins(), stats.getKills().getTotal());
 
         System.out.println("\nKilled Types:");
-        stats.getKills().getTypedList().forEach(kill -> System.out.printf("Type: %s | %d%n", kill.getType(), kill.getAmount()));
+        stats.getKills().getTypedList().forEach(kill -> System.out.printf("%s | %d%n", kill.getType(), kill.getAmount()));
 
         System.out.printf("\nResponse Took: %dms", end_1 - start_1);
     }

@@ -28,13 +28,17 @@ me\endergaming\common\grpc\Communication$Server_InfoOrBuilder.class
 me\endergaming\common\grpc\Communication$UUIDOrBuilder.class
 me\endergaming\common\grpc\Communication$KillsOrBuilder.class
 me\endergaming\common\grpc\Communication$Player.class
+me\endergaming\common\grpc\Communication$StatsConnectionResponse$1.class
 me\endergaming\common\grpc\Communication$Player$Builder.class
 me\endergaming\common\grpc\CommunicationsGrpc$CommunicationsImplBase.class
+me\endergaming\common\grpc\Communication$StatsConnectionResponse.class
 me\endergaming\common\grpc\Communication$Stats.class
 me\endergaming\common\grpc\Communication$UUID$Builder.class
 me\endergaming\common\grpc\Communication$Stats$Builder.class
+me\endergaming\common\grpc\Communication$StatsConnectionResponseOrBuilder.class
 me\endergaming\common\grpc\CommunicationsGrpc$CommunicationsStub.class
 me\endergaming\common\grpc\Communication$PlayerOrBuilder.class
+me\endergaming\common\grpc\Communication$StatsConnectionResponse$Builder.class
 me\endergaming\common\grpc\Communication$Empty$1.class
 me\endergaming\common\grpc\Communication$PlayerStatsRequest.class
 me\endergaming\common\grpc\Communication$Kills.class

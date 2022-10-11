@@ -45,6 +45,8 @@ public final class Communicator extends JavaPlugin implements Listener {
             return new Stats();
         }
     });
+
+    private final CommunicationImpl implementor = new CommunicationImpl();
     private final Gson gson = new GsonBuilder()
             .setPrettyPrinting()
             .enableComplexMapKeySerialization()
@@ -62,7 +64,7 @@ public final class Communicator extends JavaPlugin implements Listener {
         this.getServer().getPluginManager().registerEvents(this, this);
 
         this.server = ServerBuilder.forPort(3009)
-                .addService(new CommunicationImpl())
+                .addService(this.implementor)
                 .build();
 
         this.server.start();
@@ -157,9 +159,7 @@ public final class Communicator extends JavaPlugin implements Listener {
 
         UUID uuid = e.getPlayer().getUniqueId();
 
-        System.out.println("M: " + uuid.getMostSignificantBits());
-        System.out.println("L: " + uuid.getLeastSignificantBits());
-        System.out.println("Created: " + MessageBuilder.buildUUID(uuid));
+        this.implementor.notifyStatsUpdate(e.getPlayer(), stats);
     }
 
     @SneakyThrows
@@ -168,6 +168,8 @@ public final class Communicator extends JavaPlugin implements Listener {
         Stats stats = this.dataCache.get(e.getPlayer().getUniqueId());
 
         stats.setBlocksMined(stats.getBlocksMined() + 1);
+
+        this.implementor.notifyStatsUpdate(e.getPlayer(), stats);
     }
 
     @SneakyThrows
@@ -176,6 +178,8 @@ public final class Communicator extends JavaPlugin implements Listener {
         Stats stats = this.dataCache.get(e.getPlayer().getUniqueId());
 
         stats.setBlocksPlaced(stats.getBlocksPlaced() + 1);
+
+        this.implementor.notifyStatsUpdate(e.getPlayer(), stats);
     }
 
     @SneakyThrows
@@ -192,7 +196,10 @@ public final class Communicator extends JavaPlugin implements Listener {
         }
 
         stats.setDamageTaken(stats.getDamageTaken() + e.getFinalDamage());
+
+        this.implementor.notifyStatsUpdate(player, stats);
     }
+
 
     @SneakyThrows
     @EventHandler
@@ -211,7 +218,11 @@ public final class Communicator extends JavaPlugin implements Listener {
             stats.addKill(living.getType().name().toLowerCase(), 1);
         }
 
-        stats.setDamageDealt(stats.getDamageDealt() + e.getFinalDamage());
+        double dmg = Math.min(e.getFinalDamage(), living.getHealth());
+
+        stats.setDamageDealt(stats.getDamageDealt() + dmg);
+
+        this.implementor.notifyStatsUpdate(player, stats);
     }
 
     @SneakyThrows
@@ -220,6 +231,8 @@ public final class Communicator extends JavaPlugin implements Listener {
         Stats stats = this.dataCache.get(e.getPlayer().getUniqueId());
 
         stats.setItemsDropped(stats.getItemsDropped() + e.getItemDrop().getItemStack().getAmount());
+
+        this.implementor.notifyStatsUpdate(e.getPlayer(), stats);
     }
 
     @SneakyThrows

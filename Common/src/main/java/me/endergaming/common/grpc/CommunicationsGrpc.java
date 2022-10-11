@@ -91,6 +91,38 @@ public final class CommunicationsGrpc {
      return getGetServerInfoMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Empty,
+      me.endergaming.common.grpc.Communication.StatsConnectionResponse> getEstablishStatsConnectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EstablishStatsConnection",
+      requestType = me.endergaming.common.grpc.Communication.Empty.class,
+      responseType = me.endergaming.common.grpc.Communication.StatsConnectionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Empty,
+      me.endergaming.common.grpc.Communication.StatsConnectionResponse> getEstablishStatsConnectionMethod() {
+    io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Empty, me.endergaming.common.grpc.Communication.StatsConnectionResponse> getEstablishStatsConnectionMethod;
+    if ((getEstablishStatsConnectionMethod = CommunicationsGrpc.getEstablishStatsConnectionMethod) == null) {
+      synchronized (CommunicationsGrpc.class) {
+        if ((getEstablishStatsConnectionMethod = CommunicationsGrpc.getEstablishStatsConnectionMethod) == null) {
+          CommunicationsGrpc.getEstablishStatsConnectionMethod = getEstablishStatsConnectionMethod = 
+              io.grpc.MethodDescriptor.<me.endergaming.common.grpc.Communication.Empty, me.endergaming.common.grpc.Communication.StatsConnectionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "Communications", "EstablishStatsConnection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  me.endergaming.common.grpc.Communication.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  me.endergaming.common.grpc.Communication.StatsConnectionResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CommunicationsMethodDescriptorSupplier("EstablishStatsConnection"))
+                  .build();
+          }
+        }
+     }
+     return getEstablishStatsConnectionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -132,6 +164,13 @@ public final class CommunicationsGrpc {
       asyncUnimplementedUnaryCall(getGetServerInfoMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void establishStatsConnection(me.endergaming.common.grpc.Communication.Empty request,
+        io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.StatsConnectionResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getEstablishStatsConnectionMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -148,6 +187,13 @@ public final class CommunicationsGrpc {
                 me.endergaming.common.grpc.Communication.Empty,
                 me.endergaming.common.grpc.Communication.Server_Info>(
                   this, METHODID_GET_SERVER_INFO)))
+          .addMethod(
+            getEstablishStatsConnectionMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                me.endergaming.common.grpc.Communication.Empty,
+                me.endergaming.common.grpc.Communication.StatsConnectionResponse>(
+                  this, METHODID_ESTABLISH_STATS_CONNECTION)))
           .build();
     }
   }
@@ -185,6 +231,14 @@ public final class CommunicationsGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetServerInfoMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void establishStatsConnection(me.endergaming.common.grpc.Communication.Empty request,
+        io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.StatsConnectionResponse> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getEstablishStatsConnectionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -217,6 +271,14 @@ public final class CommunicationsGrpc {
     public me.endergaming.common.grpc.Communication.Server_Info getServerInfo(me.endergaming.common.grpc.Communication.Empty request) {
       return blockingUnaryCall(
           getChannel(), getGetServerInfoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<me.endergaming.common.grpc.Communication.StatsConnectionResponse> establishStatsConnection(
+        me.endergaming.common.grpc.Communication.Empty request) {
+      return blockingServerStreamingCall(
+          getChannel(), getEstablishStatsConnectionMethod(), getCallOptions(), request);
     }
   }
 
@@ -257,6 +319,7 @@ public final class CommunicationsGrpc {
 
   private static final int METHODID_GET_STATS = 0;
   private static final int METHODID_GET_SERVER_INFO = 1;
+  private static final int METHODID_ESTABLISH_STATS_CONNECTION = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -282,6 +345,10 @@ public final class CommunicationsGrpc {
         case METHODID_GET_SERVER_INFO:
           serviceImpl.getServerInfo((me.endergaming.common.grpc.Communication.Empty) request,
               (io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.Server_Info>) responseObserver);
+          break;
+        case METHODID_ESTABLISH_STATS_CONNECTION:
+          serviceImpl.establishStatsConnection((me.endergaming.common.grpc.Communication.Empty) request,
+              (io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.StatsConnectionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -346,6 +413,7 @@ public final class CommunicationsGrpc {
               .setSchemaDescriptor(new CommunicationsFileDescriptorSupplier())
               .addMethod(getGetStatsMethod())
               .addMethod(getGetServerInfoMethod())
+              .addMethod(getEstablishStatsConnectionMethod())
               .build();
         }
       }

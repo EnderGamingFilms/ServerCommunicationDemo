@@ -6,6 +6,7 @@ option java_package = "me.endergaming.common.grpc";
 service Communications {
     rpc GetStats(PlayerStatsRequest) returns (Stats);
     rpc GetServerInfo(Empty) returns (Server_Info);
+    rpc EstablishStatsConnection(Empty) returns (stream StatsConnectionResponse);
 }
 
 
@@ -52,6 +53,11 @@ message Server_Info {
 
 message PlayerStatsRequest {
     Player player = 1;
+}
+
+message StatsConnectionResponse {
+    Player player = 1;
+    Stats stats = 2;
 }
 
 message Empty {}

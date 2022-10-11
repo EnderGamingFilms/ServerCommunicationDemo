@@ -5,7 +5,6 @@ import io.grpc.ManagedChannelBuilder;
 import me.endergaming.common.grpc.Communication;
 import me.endergaming.common.grpc.CommunicationsGrpc;
 
-import java.io.IOException;
 import java.util.UUID;
 
 public class App {
@@ -18,16 +17,22 @@ public class App {
         CommunicationsGrpc.CommunicationsBlockingStub stub = CommunicationsGrpc.newBlockingStub(channel);
 
         new Thread(() -> {
+            var it = stub
+                    .withWaitForReady()
+                    .establishStatsConnection(MessageBuilder.buildEmpty());
+
             while (true) {
-                System.out.println("\n\n\n\n\n\n\n\n------------------------------------------------------");
-                System.out.flush();
+                if (it.hasNext()) {
+                    System.out.println("\n\n\n\n\n\n\n\n------------------------------------------------------");
+                    Communication.StatsConnectionResponse response = it.next();
 
-                pollServer(stub);
+                    Communication.Stats stats = response.getStats();
+                    Communication.Player player = response.getPlayer();
 
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    System.out.printf("Stats of %s: \nBlocks Mined: %d \nBlocks Placed: %d \nItems Dropped: %d \nDamage Dealt: %f \nDamage Taken: %f \nDeaths: %d \nJoins: %d \nKills: %d%n",
+                            player.getName(), stats.getBlockedMined(), stats.getBlocksPlaced(), stats.getItemsDropped(), stats.getDamageDealt(), stats.getDamageTaken(), stats.getDeaths(), stats.getJoins(), stats.getKills().getTotal());
+                    System.out.println("\nKilled Types:");
+                    stats.getKills().getTypedList().forEach(kill -> System.out.printf("%s | %d%n", kill.getType(), kill.getAmount()));
                 }
             }
         }).start();

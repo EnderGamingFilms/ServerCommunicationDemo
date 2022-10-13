@@ -19,23 +19,44 @@ public class App {
         new Thread(() -> {
             var it = stub
                     .withWaitForReady()
-                    .establishStatsConnection(MessageBuilder.buildEmpty());
+                    .establishCustomStatsConnection(MessageBuilder.buildEmpty());
 
             while (true) {
                 if (it.hasNext()) {
                     System.out.println("\n\n\n\n\n\n\n\n------------------------------------------------------");
-                    Communication.StatsConnectionResponse response = it.next();
+                    Communication.StatStreamResponse response = it.next();
 
-                    Communication.Stats stats = response.getStats();
-                    Communication.Player player = response.getPlayer();
+                    Communication.MultiStat stats = response.getStats();
+                    String owner = response.getOwner();
 
-                    System.out.printf("Stats of %s: \nBlocks Mined: %d \nBlocks Placed: %d \nItems Dropped: %d \nDamage Dealt: %f \nDamage Taken: %f \nDeaths: %d \nJoins: %d \nKills: %d%n",
-                            player.getName(), stats.getBlockedMined(), stats.getBlocksPlaced(), stats.getItemsDropped(), stats.getDamageDealt(), stats.getDamageTaken(), stats.getDeaths(), stats.getJoins(), stats.getKills().getTotal());
-                    System.out.println("\nKilled Types:");
-                    stats.getKills().getTypedList().forEach(kill -> System.out.printf("%s | %d%n", kill.getType(), kill.getAmount()));
+                    System.out.println("Stats for " + owner);
+
+                    for (Communication.Stat stat : stats.getStatsList()) {
+                        String key = fix(stat.getKey(), true);
+                        Communication.Value value = stat.getValue();
+
+                        printValue(key, value);
+                    }
+
+//                    stats.getKills().getTypedList().forEach(kill -> System.out.printf("%s | %d%n", kill.getType(), kill.getAmount()));
                 }
             }
         }).start();
+    }
+
+    private static void printValue(String key, Communication.Value value) {
+        if (value.hasNumber()) {
+            System.out.println(key + ": " + MessageBuilder.toJavaNumber(value.getNumber()));
+        } else if (value.hasBoolValue()) {
+            System.out.println(key + ": " + value.getBoolValue());
+        } else if (value.hasStringValue()) {
+            System.out.println(key + ": " + value.getStringValue());
+        } else if (value.hasStatsList()) {
+            System.out.println(fix(key, false));
+            for (Communication.Stat stat : value.getStatsList().getStatsList()) {
+                printValue("  " + stat.getKey(), stat.getValue());
+            }
+        }
     }
 
     private static void pollServer(CommunicationsGrpc.CommunicationsBlockingStub stub) {
@@ -67,5 +88,44 @@ public class App {
         stats.getKills().getTypedList().forEach(kill -> System.out.printf("%s | %d%n", kill.getType(), kill.getAmount()));
 
         System.out.printf("\nResponse Took: %dms", end_1 - start_1);
+    }
+
+    /**
+     * Fix the given text with making the first letter capitalised and the rest not.
+     *
+     * @param text the text fixing.
+     * @param replaceUnderscore True to replace all _ with a space, false otherwise.
+     * @return The new fixed text.
+     */
+    public static String fix(String text, boolean replaceUnderscore) {
+        if (text.isEmpty()) {
+            return text;
+        }
+
+        if (text.length() == 1) {
+            return text.toUpperCase();
+        }
+
+        if (replaceUnderscore) {
+            text = text.replace("_", " ");
+        }
+
+        StringBuilder builder = new StringBuilder();
+
+        for (String split : text.split(" ")) {
+            if (split.isEmpty()) {
+                builder.append(" ");
+                continue;
+            }
+
+            if (split.length() == 1) {
+                builder.append(split.toUpperCase()).append(" ");
+                continue;
+            }
+
+            builder.append(split.substring(0, 1).toUpperCase()).append(split.substring(1).toLowerCase()).append(" ");
+        }
+
+        return builder.toString().trim();
     }
 }

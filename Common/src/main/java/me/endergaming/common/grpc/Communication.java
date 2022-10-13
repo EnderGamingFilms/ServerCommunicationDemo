@@ -6448,6 +6448,4978 @@ public final class Communication {
 
   }
 
+  public interface NumberOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Number)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Int32Value int32 = 1;</code>
+     */
+    boolean hasInt32();
+    /**
+     * <code>.google.protobuf.Int32Value int32 = 1;</code>
+     */
+    com.google.protobuf.Int32Value getInt32();
+    /**
+     * <code>.google.protobuf.Int32Value int32 = 1;</code>
+     */
+    com.google.protobuf.Int32ValueOrBuilder getInt32OrBuilder();
+
+    /**
+     * <code>.google.protobuf.Int64Value int64 = 2;</code>
+     */
+    boolean hasInt64();
+    /**
+     * <code>.google.protobuf.Int64Value int64 = 2;</code>
+     */
+    com.google.protobuf.Int64Value getInt64();
+    /**
+     * <code>.google.protobuf.Int64Value int64 = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInt64OrBuilder();
+
+    /**
+     * <code>.google.protobuf.FloatValue float32 = 3;</code>
+     */
+    boolean hasFloat32();
+    /**
+     * <code>.google.protobuf.FloatValue float32 = 3;</code>
+     */
+    com.google.protobuf.FloatValue getFloat32();
+    /**
+     * <code>.google.protobuf.FloatValue float32 = 3;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getFloat32OrBuilder();
+
+    /**
+     * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+     */
+    boolean hasFloat64();
+    /**
+     * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+     */
+    com.google.protobuf.DoubleValue getFloat64();
+    /**
+     * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getFloat64OrBuilder();
+
+    public me.endergaming.common.grpc.Communication.Number.NumberCase getNumberCase();
+  }
+  /**
+   * Protobuf type {@code Number}
+   */
+  public  static final class Number extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Number)
+      NumberOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Number.newBuilder() to construct.
+    private Number(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Number() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Number(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int32Value.Builder subBuilder = null;
+              if (numberCase_ == 1) {
+                subBuilder = ((com.google.protobuf.Int32Value) number_).toBuilder();
+              }
+              number_ =
+                  input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.Int32Value) number_);
+                number_ = subBuilder.buildPartial();
+              }
+              numberCase_ = 1;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (numberCase_ == 2) {
+                subBuilder = ((com.google.protobuf.Int64Value) number_).toBuilder();
+              }
+              number_ =
+                  input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.Int64Value) number_);
+                number_ = subBuilder.buildPartial();
+              }
+              numberCase_ = 2;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.FloatValue.Builder subBuilder = null;
+              if (numberCase_ == 3) {
+                subBuilder = ((com.google.protobuf.FloatValue) number_).toBuilder();
+              }
+              number_ =
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.FloatValue) number_);
+                number_ = subBuilder.buildPartial();
+              }
+              numberCase_ = 3;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.DoubleValue.Builder subBuilder = null;
+              if (numberCase_ == 4) {
+                subBuilder = ((com.google.protobuf.DoubleValue) number_).toBuilder();
+              }
+              number_ =
+                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.DoubleValue) number_);
+                number_ = subBuilder.buildPartial();
+              }
+              numberCase_ = 4;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return me.endergaming.common.grpc.Communication.internal_static_Number_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return me.endergaming.common.grpc.Communication.internal_static_Number_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              me.endergaming.common.grpc.Communication.Number.class, me.endergaming.common.grpc.Communication.Number.Builder.class);
+    }
+
+    private int numberCase_ = 0;
+    private java.lang.Object number_;
+    public enum NumberCase
+        implements com.google.protobuf.Internal.EnumLite {
+      INT32(1),
+      INT64(2),
+      FLOAT32(3),
+      FLOAT64(4),
+      NUMBER_NOT_SET(0);
+      private final int value;
+      private NumberCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static NumberCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static NumberCase forNumber(int value) {
+        switch (value) {
+          case 1: return INT32;
+          case 2: return INT64;
+          case 3: return FLOAT32;
+          case 4: return FLOAT64;
+          case 0: return NUMBER_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public NumberCase
+    getNumberCase() {
+      return NumberCase.forNumber(
+          numberCase_);
+    }
+
+    public static final int INT32_FIELD_NUMBER = 1;
+    /**
+     * <code>.google.protobuf.Int32Value int32 = 1;</code>
+     */
+    public boolean hasInt32() {
+      return numberCase_ == 1;
+    }
+    /**
+     * <code>.google.protobuf.Int32Value int32 = 1;</code>
+     */
+    public com.google.protobuf.Int32Value getInt32() {
+      if (numberCase_ == 1) {
+         return (com.google.protobuf.Int32Value) number_;
+      }
+      return com.google.protobuf.Int32Value.getDefaultInstance();
+    }
+    /**
+     * <code>.google.protobuf.Int32Value int32 = 1;</code>
+     */
+    public com.google.protobuf.Int32ValueOrBuilder getInt32OrBuilder() {
+      if (numberCase_ == 1) {
+         return (com.google.protobuf.Int32Value) number_;
+      }
+      return com.google.protobuf.Int32Value.getDefaultInstance();
+    }
+
+    public static final int INT64_FIELD_NUMBER = 2;
+    /**
+     * <code>.google.protobuf.Int64Value int64 = 2;</code>
+     */
+    public boolean hasInt64() {
+      return numberCase_ == 2;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value int64 = 2;</code>
+     */
+    public com.google.protobuf.Int64Value getInt64() {
+      if (numberCase_ == 2) {
+         return (com.google.protobuf.Int64Value) number_;
+      }
+      return com.google.protobuf.Int64Value.getDefaultInstance();
+    }
+    /**
+     * <code>.google.protobuf.Int64Value int64 = 2;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInt64OrBuilder() {
+      if (numberCase_ == 2) {
+         return (com.google.protobuf.Int64Value) number_;
+      }
+      return com.google.protobuf.Int64Value.getDefaultInstance();
+    }
+
+    public static final int FLOAT32_FIELD_NUMBER = 3;
+    /**
+     * <code>.google.protobuf.FloatValue float32 = 3;</code>
+     */
+    public boolean hasFloat32() {
+      return numberCase_ == 3;
+    }
+    /**
+     * <code>.google.protobuf.FloatValue float32 = 3;</code>
+     */
+    public com.google.protobuf.FloatValue getFloat32() {
+      if (numberCase_ == 3) {
+         return (com.google.protobuf.FloatValue) number_;
+      }
+      return com.google.protobuf.FloatValue.getDefaultInstance();
+    }
+    /**
+     * <code>.google.protobuf.FloatValue float32 = 3;</code>
+     */
+    public com.google.protobuf.FloatValueOrBuilder getFloat32OrBuilder() {
+      if (numberCase_ == 3) {
+         return (com.google.protobuf.FloatValue) number_;
+      }
+      return com.google.protobuf.FloatValue.getDefaultInstance();
+    }
+
+    public static final int FLOAT64_FIELD_NUMBER = 4;
+    /**
+     * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+     */
+    public boolean hasFloat64() {
+      return numberCase_ == 4;
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+     */
+    public com.google.protobuf.DoubleValue getFloat64() {
+      if (numberCase_ == 4) {
+         return (com.google.protobuf.DoubleValue) number_;
+      }
+      return com.google.protobuf.DoubleValue.getDefaultInstance();
+    }
+    /**
+     * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getFloat64OrBuilder() {
+      if (numberCase_ == 4) {
+         return (com.google.protobuf.DoubleValue) number_;
+      }
+      return com.google.protobuf.DoubleValue.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (numberCase_ == 1) {
+        output.writeMessage(1, (com.google.protobuf.Int32Value) number_);
+      }
+      if (numberCase_ == 2) {
+        output.writeMessage(2, (com.google.protobuf.Int64Value) number_);
+      }
+      if (numberCase_ == 3) {
+        output.writeMessage(3, (com.google.protobuf.FloatValue) number_);
+      }
+      if (numberCase_ == 4) {
+        output.writeMessage(4, (com.google.protobuf.DoubleValue) number_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (numberCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.google.protobuf.Int32Value) number_);
+      }
+      if (numberCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.google.protobuf.Int64Value) number_);
+      }
+      if (numberCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.google.protobuf.FloatValue) number_);
+      }
+      if (numberCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.google.protobuf.DoubleValue) number_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof me.endergaming.common.grpc.Communication.Number)) {
+        return super.equals(obj);
+      }
+      me.endergaming.common.grpc.Communication.Number other = (me.endergaming.common.grpc.Communication.Number) obj;
+
+      boolean result = true;
+      result = result && getNumberCase().equals(
+          other.getNumberCase());
+      if (!result) return false;
+      switch (numberCase_) {
+        case 1:
+          result = result && getInt32()
+              .equals(other.getInt32());
+          break;
+        case 2:
+          result = result && getInt64()
+              .equals(other.getInt64());
+          break;
+        case 3:
+          result = result && getFloat32()
+              .equals(other.getFloat32());
+          break;
+        case 4:
+          result = result && getFloat64()
+              .equals(other.getFloat64());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (numberCase_) {
+        case 1:
+          hash = (37 * hash) + INT32_FIELD_NUMBER;
+          hash = (53 * hash) + getInt32().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + INT64_FIELD_NUMBER;
+          hash = (53 * hash) + getInt64().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + FLOAT32_FIELD_NUMBER;
+          hash = (53 * hash) + getFloat32().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + FLOAT64_FIELD_NUMBER;
+          hash = (53 * hash) + getFloat64().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static me.endergaming.common.grpc.Communication.Number parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.Number parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(me.endergaming.common.grpc.Communication.Number prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Number}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Number)
+        me.endergaming.common.grpc.Communication.NumberOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return me.endergaming.common.grpc.Communication.internal_static_Number_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return me.endergaming.common.grpc.Communication.internal_static_Number_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                me.endergaming.common.grpc.Communication.Number.class, me.endergaming.common.grpc.Communication.Number.Builder.class);
+      }
+
+      // Construct using me.endergaming.common.grpc.Communication.Number.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        numberCase_ = 0;
+        number_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return me.endergaming.common.grpc.Communication.internal_static_Number_descriptor;
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.Number getDefaultInstanceForType() {
+        return me.endergaming.common.grpc.Communication.Number.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.Number build() {
+        me.endergaming.common.grpc.Communication.Number result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.Number buildPartial() {
+        me.endergaming.common.grpc.Communication.Number result = new me.endergaming.common.grpc.Communication.Number(this);
+        if (numberCase_ == 1) {
+          if (int32Builder_ == null) {
+            result.number_ = number_;
+          } else {
+            result.number_ = int32Builder_.build();
+          }
+        }
+        if (numberCase_ == 2) {
+          if (int64Builder_ == null) {
+            result.number_ = number_;
+          } else {
+            result.number_ = int64Builder_.build();
+          }
+        }
+        if (numberCase_ == 3) {
+          if (float32Builder_ == null) {
+            result.number_ = number_;
+          } else {
+            result.number_ = float32Builder_.build();
+          }
+        }
+        if (numberCase_ == 4) {
+          if (float64Builder_ == null) {
+            result.number_ = number_;
+          } else {
+            result.number_ = float64Builder_.build();
+          }
+        }
+        result.numberCase_ = numberCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof me.endergaming.common.grpc.Communication.Number) {
+          return mergeFrom((me.endergaming.common.grpc.Communication.Number)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(me.endergaming.common.grpc.Communication.Number other) {
+        if (other == me.endergaming.common.grpc.Communication.Number.getDefaultInstance()) return this;
+        switch (other.getNumberCase()) {
+          case INT32: {
+            mergeInt32(other.getInt32());
+            break;
+          }
+          case INT64: {
+            mergeInt64(other.getInt64());
+            break;
+          }
+          case FLOAT32: {
+            mergeFloat32(other.getFloat32());
+            break;
+          }
+          case FLOAT64: {
+            mergeFloat64(other.getFloat64());
+            break;
+          }
+          case NUMBER_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        me.endergaming.common.grpc.Communication.Number parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (me.endergaming.common.grpc.Communication.Number) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int numberCase_ = 0;
+      private java.lang.Object number_;
+      public NumberCase
+          getNumberCase() {
+        return NumberCase.forNumber(
+            numberCase_);
+      }
+
+      public Builder clearNumber() {
+        numberCase_ = 0;
+        number_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> int32Builder_;
+      /**
+       * <code>.google.protobuf.Int32Value int32 = 1;</code>
+       */
+      public boolean hasInt32() {
+        return numberCase_ == 1;
+      }
+      /**
+       * <code>.google.protobuf.Int32Value int32 = 1;</code>
+       */
+      public com.google.protobuf.Int32Value getInt32() {
+        if (int32Builder_ == null) {
+          if (numberCase_ == 1) {
+            return (com.google.protobuf.Int32Value) number_;
+          }
+          return com.google.protobuf.Int32Value.getDefaultInstance();
+        } else {
+          if (numberCase_ == 1) {
+            return int32Builder_.getMessage();
+          }
+          return com.google.protobuf.Int32Value.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int32Value int32 = 1;</code>
+       */
+      public Builder setInt32(com.google.protobuf.Int32Value value) {
+        if (int32Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          number_ = value;
+          onChanged();
+        } else {
+          int32Builder_.setMessage(value);
+        }
+        numberCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int32Value int32 = 1;</code>
+       */
+      public Builder setInt32(
+          com.google.protobuf.Int32Value.Builder builderForValue) {
+        if (int32Builder_ == null) {
+          number_ = builderForValue.build();
+          onChanged();
+        } else {
+          int32Builder_.setMessage(builderForValue.build());
+        }
+        numberCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int32Value int32 = 1;</code>
+       */
+      public Builder mergeInt32(com.google.protobuf.Int32Value value) {
+        if (int32Builder_ == null) {
+          if (numberCase_ == 1 &&
+              number_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+            number_ = com.google.protobuf.Int32Value.newBuilder((com.google.protobuf.Int32Value) number_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            number_ = value;
+          }
+          onChanged();
+        } else {
+          if (numberCase_ == 1) {
+            int32Builder_.mergeFrom(value);
+          }
+          int32Builder_.setMessage(value);
+        }
+        numberCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int32Value int32 = 1;</code>
+       */
+      public Builder clearInt32() {
+        if (int32Builder_ == null) {
+          if (numberCase_ == 1) {
+            numberCase_ = 0;
+            number_ = null;
+            onChanged();
+          }
+        } else {
+          if (numberCase_ == 1) {
+            numberCase_ = 0;
+            number_ = null;
+          }
+          int32Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int32Value int32 = 1;</code>
+       */
+      public com.google.protobuf.Int32Value.Builder getInt32Builder() {
+        return getInt32FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int32Value int32 = 1;</code>
+       */
+      public com.google.protobuf.Int32ValueOrBuilder getInt32OrBuilder() {
+        if ((numberCase_ == 1) && (int32Builder_ != null)) {
+          return int32Builder_.getMessageOrBuilder();
+        } else {
+          if (numberCase_ == 1) {
+            return (com.google.protobuf.Int32Value) number_;
+          }
+          return com.google.protobuf.Int32Value.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int32Value int32 = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+          getInt32FieldBuilder() {
+        if (int32Builder_ == null) {
+          if (!(numberCase_ == 1)) {
+            number_ = com.google.protobuf.Int32Value.getDefaultInstance();
+          }
+          int32Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                  (com.google.protobuf.Int32Value) number_,
+                  getParentForChildren(),
+                  isClean());
+          number_ = null;
+        }
+        numberCase_ = 1;
+        onChanged();;
+        return int32Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> int64Builder_;
+      /**
+       * <code>.google.protobuf.Int64Value int64 = 2;</code>
+       */
+      public boolean hasInt64() {
+        return numberCase_ == 2;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value int64 = 2;</code>
+       */
+      public com.google.protobuf.Int64Value getInt64() {
+        if (int64Builder_ == null) {
+          if (numberCase_ == 2) {
+            return (com.google.protobuf.Int64Value) number_;
+          }
+          return com.google.protobuf.Int64Value.getDefaultInstance();
+        } else {
+          if (numberCase_ == 2) {
+            return int64Builder_.getMessage();
+          }
+          return com.google.protobuf.Int64Value.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value int64 = 2;</code>
+       */
+      public Builder setInt64(com.google.protobuf.Int64Value value) {
+        if (int64Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          number_ = value;
+          onChanged();
+        } else {
+          int64Builder_.setMessage(value);
+        }
+        numberCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value int64 = 2;</code>
+       */
+      public Builder setInt64(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (int64Builder_ == null) {
+          number_ = builderForValue.build();
+          onChanged();
+        } else {
+          int64Builder_.setMessage(builderForValue.build());
+        }
+        numberCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value int64 = 2;</code>
+       */
+      public Builder mergeInt64(com.google.protobuf.Int64Value value) {
+        if (int64Builder_ == null) {
+          if (numberCase_ == 2 &&
+              number_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+            number_ = com.google.protobuf.Int64Value.newBuilder((com.google.protobuf.Int64Value) number_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            number_ = value;
+          }
+          onChanged();
+        } else {
+          if (numberCase_ == 2) {
+            int64Builder_.mergeFrom(value);
+          }
+          int64Builder_.setMessage(value);
+        }
+        numberCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value int64 = 2;</code>
+       */
+      public Builder clearInt64() {
+        if (int64Builder_ == null) {
+          if (numberCase_ == 2) {
+            numberCase_ = 0;
+            number_ = null;
+            onChanged();
+          }
+        } else {
+          if (numberCase_ == 2) {
+            numberCase_ = 0;
+            number_ = null;
+          }
+          int64Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value int64 = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInt64Builder() {
+        return getInt64FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value int64 = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInt64OrBuilder() {
+        if ((numberCase_ == 2) && (int64Builder_ != null)) {
+          return int64Builder_.getMessageOrBuilder();
+        } else {
+          if (numberCase_ == 2) {
+            return (com.google.protobuf.Int64Value) number_;
+          }
+          return com.google.protobuf.Int64Value.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value int64 = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInt64FieldBuilder() {
+        if (int64Builder_ == null) {
+          if (!(numberCase_ == 2)) {
+            number_ = com.google.protobuf.Int64Value.getDefaultInstance();
+          }
+          int64Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  (com.google.protobuf.Int64Value) number_,
+                  getParentForChildren(),
+                  isClean());
+          number_ = null;
+        }
+        numberCase_ = 2;
+        onChanged();;
+        return int64Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> float32Builder_;
+      /**
+       * <code>.google.protobuf.FloatValue float32 = 3;</code>
+       */
+      public boolean hasFloat32() {
+        return numberCase_ == 3;
+      }
+      /**
+       * <code>.google.protobuf.FloatValue float32 = 3;</code>
+       */
+      public com.google.protobuf.FloatValue getFloat32() {
+        if (float32Builder_ == null) {
+          if (numberCase_ == 3) {
+            return (com.google.protobuf.FloatValue) number_;
+          }
+          return com.google.protobuf.FloatValue.getDefaultInstance();
+        } else {
+          if (numberCase_ == 3) {
+            return float32Builder_.getMessage();
+          }
+          return com.google.protobuf.FloatValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.FloatValue float32 = 3;</code>
+       */
+      public Builder setFloat32(com.google.protobuf.FloatValue value) {
+        if (float32Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          number_ = value;
+          onChanged();
+        } else {
+          float32Builder_.setMessage(value);
+        }
+        numberCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FloatValue float32 = 3;</code>
+       */
+      public Builder setFloat32(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (float32Builder_ == null) {
+          number_ = builderForValue.build();
+          onChanged();
+        } else {
+          float32Builder_.setMessage(builderForValue.build());
+        }
+        numberCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FloatValue float32 = 3;</code>
+       */
+      public Builder mergeFloat32(com.google.protobuf.FloatValue value) {
+        if (float32Builder_ == null) {
+          if (numberCase_ == 3 &&
+              number_ != com.google.protobuf.FloatValue.getDefaultInstance()) {
+            number_ = com.google.protobuf.FloatValue.newBuilder((com.google.protobuf.FloatValue) number_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            number_ = value;
+          }
+          onChanged();
+        } else {
+          if (numberCase_ == 3) {
+            float32Builder_.mergeFrom(value);
+          }
+          float32Builder_.setMessage(value);
+        }
+        numberCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FloatValue float32 = 3;</code>
+       */
+      public Builder clearFloat32() {
+        if (float32Builder_ == null) {
+          if (numberCase_ == 3) {
+            numberCase_ = 0;
+            number_ = null;
+            onChanged();
+          }
+        } else {
+          if (numberCase_ == 3) {
+            numberCase_ = 0;
+            number_ = null;
+          }
+          float32Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FloatValue float32 = 3;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getFloat32Builder() {
+        return getFloat32FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.FloatValue float32 = 3;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getFloat32OrBuilder() {
+        if ((numberCase_ == 3) && (float32Builder_ != null)) {
+          return float32Builder_.getMessageOrBuilder();
+        } else {
+          if (numberCase_ == 3) {
+            return (com.google.protobuf.FloatValue) number_;
+          }
+          return com.google.protobuf.FloatValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.FloatValue float32 = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getFloat32FieldBuilder() {
+        if (float32Builder_ == null) {
+          if (!(numberCase_ == 3)) {
+            number_ = com.google.protobuf.FloatValue.getDefaultInstance();
+          }
+          float32Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  (com.google.protobuf.FloatValue) number_,
+                  getParentForChildren(),
+                  isClean());
+          number_ = null;
+        }
+        numberCase_ = 3;
+        onChanged();;
+        return float32Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> float64Builder_;
+      /**
+       * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+       */
+      public boolean hasFloat64() {
+        return numberCase_ == 4;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+       */
+      public com.google.protobuf.DoubleValue getFloat64() {
+        if (float64Builder_ == null) {
+          if (numberCase_ == 4) {
+            return (com.google.protobuf.DoubleValue) number_;
+          }
+          return com.google.protobuf.DoubleValue.getDefaultInstance();
+        } else {
+          if (numberCase_ == 4) {
+            return float64Builder_.getMessage();
+          }
+          return com.google.protobuf.DoubleValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+       */
+      public Builder setFloat64(com.google.protobuf.DoubleValue value) {
+        if (float64Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          number_ = value;
+          onChanged();
+        } else {
+          float64Builder_.setMessage(value);
+        }
+        numberCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+       */
+      public Builder setFloat64(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (float64Builder_ == null) {
+          number_ = builderForValue.build();
+          onChanged();
+        } else {
+          float64Builder_.setMessage(builderForValue.build());
+        }
+        numberCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+       */
+      public Builder mergeFloat64(com.google.protobuf.DoubleValue value) {
+        if (float64Builder_ == null) {
+          if (numberCase_ == 4 &&
+              number_ != com.google.protobuf.DoubleValue.getDefaultInstance()) {
+            number_ = com.google.protobuf.DoubleValue.newBuilder((com.google.protobuf.DoubleValue) number_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            number_ = value;
+          }
+          onChanged();
+        } else {
+          if (numberCase_ == 4) {
+            float64Builder_.mergeFrom(value);
+          }
+          float64Builder_.setMessage(value);
+        }
+        numberCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+       */
+      public Builder clearFloat64() {
+        if (float64Builder_ == null) {
+          if (numberCase_ == 4) {
+            numberCase_ = 0;
+            number_ = null;
+            onChanged();
+          }
+        } else {
+          if (numberCase_ == 4) {
+            numberCase_ = 0;
+            number_ = null;
+          }
+          float64Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getFloat64Builder() {
+        return getFloat64FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getFloat64OrBuilder() {
+        if ((numberCase_ == 4) && (float64Builder_ != null)) {
+          return float64Builder_.getMessageOrBuilder();
+        } else {
+          if (numberCase_ == 4) {
+            return (com.google.protobuf.DoubleValue) number_;
+          }
+          return com.google.protobuf.DoubleValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.DoubleValue float64 = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getFloat64FieldBuilder() {
+        if (float64Builder_ == null) {
+          if (!(numberCase_ == 4)) {
+            number_ = com.google.protobuf.DoubleValue.getDefaultInstance();
+          }
+          float64Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  (com.google.protobuf.DoubleValue) number_,
+                  getParentForChildren(),
+                  isClean());
+          number_ = null;
+        }
+        numberCase_ = 4;
+        onChanged();;
+        return float64Builder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Number)
+    }
+
+    // @@protoc_insertion_point(class_scope:Number)
+    private static final me.endergaming.common.grpc.Communication.Number DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new me.endergaming.common.grpc.Communication.Number();
+    }
+
+    public static me.endergaming.common.grpc.Communication.Number getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Number>
+        PARSER = new com.google.protobuf.AbstractParser<Number>() {
+      @java.lang.Override
+      public Number parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Number(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Number> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Number> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public me.endergaming.common.grpc.Communication.Number getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Value)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.StringValue string_value = 1;</code>
+     */
+    boolean hasStringValue();
+    /**
+     * <code>.google.protobuf.StringValue string_value = 1;</code>
+     */
+    com.google.protobuf.StringValue getStringValue();
+    /**
+     * <code>.google.protobuf.StringValue string_value = 1;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getStringValueOrBuilder();
+
+    /**
+     * <code>.Number number_value = 2;</code>
+     */
+    boolean hasNumberValue();
+    /**
+     * <code>.Number number_value = 2;</code>
+     */
+    me.endergaming.common.grpc.Communication.Number getNumberValue();
+    /**
+     * <code>.Number number_value = 2;</code>
+     */
+    me.endergaming.common.grpc.Communication.NumberOrBuilder getNumberValueOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+     */
+    boolean hasBoolValue();
+    /**
+     * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+     */
+    com.google.protobuf.BoolValue getBoolValue();
+    /**
+     * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getBoolValueOrBuilder();
+
+    /**
+     * <code>.MultiStat stats_list = 4;</code>
+     */
+    boolean hasStatsList();
+    /**
+     * <code>.MultiStat stats_list = 4;</code>
+     */
+    me.endergaming.common.grpc.Communication.MultiStat getStatsList();
+    /**
+     * <code>.MultiStat stats_list = 4;</code>
+     */
+    me.endergaming.common.grpc.Communication.MultiStatOrBuilder getStatsListOrBuilder();
+
+    public me.endergaming.common.grpc.Communication.Value.ValueCase getValueCase();
+  }
+  /**
+   * Protobuf type {@code Value}
+   */
+  public  static final class Value extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Value)
+      ValueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Value.newBuilder() to construct.
+    private Value(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Value() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Value(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (valueCase_ == 1) {
+                subBuilder = ((com.google.protobuf.StringValue) value_).toBuilder();
+              }
+              value_ =
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.StringValue) value_);
+                value_ = subBuilder.buildPartial();
+              }
+              valueCase_ = 1;
+              break;
+            }
+            case 18: {
+              me.endergaming.common.grpc.Communication.Number.Builder subBuilder = null;
+              if (valueCase_ == 2) {
+                subBuilder = ((me.endergaming.common.grpc.Communication.Number) value_).toBuilder();
+              }
+              value_ =
+                  input.readMessage(me.endergaming.common.grpc.Communication.Number.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((me.endergaming.common.grpc.Communication.Number) value_);
+                value_ = subBuilder.buildPartial();
+              }
+              valueCase_ = 2;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (valueCase_ == 3) {
+                subBuilder = ((com.google.protobuf.BoolValue) value_).toBuilder();
+              }
+              value_ =
+                  input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.BoolValue) value_);
+                value_ = subBuilder.buildPartial();
+              }
+              valueCase_ = 3;
+              break;
+            }
+            case 34: {
+              me.endergaming.common.grpc.Communication.MultiStat.Builder subBuilder = null;
+              if (valueCase_ == 4) {
+                subBuilder = ((me.endergaming.common.grpc.Communication.MultiStat) value_).toBuilder();
+              }
+              value_ =
+                  input.readMessage(me.endergaming.common.grpc.Communication.MultiStat.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((me.endergaming.common.grpc.Communication.MultiStat) value_);
+                value_ = subBuilder.buildPartial();
+              }
+              valueCase_ = 4;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return me.endergaming.common.grpc.Communication.internal_static_Value_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return me.endergaming.common.grpc.Communication.internal_static_Value_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              me.endergaming.common.grpc.Communication.Value.class, me.endergaming.common.grpc.Communication.Value.Builder.class);
+    }
+
+    private int valueCase_ = 0;
+    private java.lang.Object value_;
+    public enum ValueCase
+        implements com.google.protobuf.Internal.EnumLite {
+      STRING_VALUE(1),
+      NUMBER_VALUE(2),
+      BOOL_VALUE(3),
+      STATS_LIST(4),
+      VALUE_NOT_SET(0);
+      private final int value;
+      private ValueCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ValueCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ValueCase forNumber(int value) {
+        switch (value) {
+          case 1: return STRING_VALUE;
+          case 2: return NUMBER_VALUE;
+          case 3: return BOOL_VALUE;
+          case 4: return STATS_LIST;
+          case 0: return VALUE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ValueCase
+    getValueCase() {
+      return ValueCase.forNumber(
+          valueCase_);
+    }
+
+    public static final int STRING_VALUE_FIELD_NUMBER = 1;
+    /**
+     * <code>.google.protobuf.StringValue string_value = 1;</code>
+     */
+    public boolean hasStringValue() {
+      return valueCase_ == 1;
+    }
+    /**
+     * <code>.google.protobuf.StringValue string_value = 1;</code>
+     */
+    public com.google.protobuf.StringValue getStringValue() {
+      if (valueCase_ == 1) {
+         return (com.google.protobuf.StringValue) value_;
+      }
+      return com.google.protobuf.StringValue.getDefaultInstance();
+    }
+    /**
+     * <code>.google.protobuf.StringValue string_value = 1;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getStringValueOrBuilder() {
+      if (valueCase_ == 1) {
+         return (com.google.protobuf.StringValue) value_;
+      }
+      return com.google.protobuf.StringValue.getDefaultInstance();
+    }
+
+    public static final int NUMBER_VALUE_FIELD_NUMBER = 2;
+    /**
+     * <code>.Number number_value = 2;</code>
+     */
+    public boolean hasNumberValue() {
+      return valueCase_ == 2;
+    }
+    /**
+     * <code>.Number number_value = 2;</code>
+     */
+    public me.endergaming.common.grpc.Communication.Number getNumberValue() {
+      if (valueCase_ == 2) {
+         return (me.endergaming.common.grpc.Communication.Number) value_;
+      }
+      return me.endergaming.common.grpc.Communication.Number.getDefaultInstance();
+    }
+    /**
+     * <code>.Number number_value = 2;</code>
+     */
+    public me.endergaming.common.grpc.Communication.NumberOrBuilder getNumberValueOrBuilder() {
+      if (valueCase_ == 2) {
+         return (me.endergaming.common.grpc.Communication.Number) value_;
+      }
+      return me.endergaming.common.grpc.Communication.Number.getDefaultInstance();
+    }
+
+    public static final int BOOL_VALUE_FIELD_NUMBER = 3;
+    /**
+     * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+     */
+    public boolean hasBoolValue() {
+      return valueCase_ == 3;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+     */
+    public com.google.protobuf.BoolValue getBoolValue() {
+      if (valueCase_ == 3) {
+         return (com.google.protobuf.BoolValue) value_;
+      }
+      return com.google.protobuf.BoolValue.getDefaultInstance();
+    }
+    /**
+     * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getBoolValueOrBuilder() {
+      if (valueCase_ == 3) {
+         return (com.google.protobuf.BoolValue) value_;
+      }
+      return com.google.protobuf.BoolValue.getDefaultInstance();
+    }
+
+    public static final int STATS_LIST_FIELD_NUMBER = 4;
+    /**
+     * <code>.MultiStat stats_list = 4;</code>
+     */
+    public boolean hasStatsList() {
+      return valueCase_ == 4;
+    }
+    /**
+     * <code>.MultiStat stats_list = 4;</code>
+     */
+    public me.endergaming.common.grpc.Communication.MultiStat getStatsList() {
+      if (valueCase_ == 4) {
+         return (me.endergaming.common.grpc.Communication.MultiStat) value_;
+      }
+      return me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance();
+    }
+    /**
+     * <code>.MultiStat stats_list = 4;</code>
+     */
+    public me.endergaming.common.grpc.Communication.MultiStatOrBuilder getStatsListOrBuilder() {
+      if (valueCase_ == 4) {
+         return (me.endergaming.common.grpc.Communication.MultiStat) value_;
+      }
+      return me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (valueCase_ == 1) {
+        output.writeMessage(1, (com.google.protobuf.StringValue) value_);
+      }
+      if (valueCase_ == 2) {
+        output.writeMessage(2, (me.endergaming.common.grpc.Communication.Number) value_);
+      }
+      if (valueCase_ == 3) {
+        output.writeMessage(3, (com.google.protobuf.BoolValue) value_);
+      }
+      if (valueCase_ == 4) {
+        output.writeMessage(4, (me.endergaming.common.grpc.Communication.MultiStat) value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (valueCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.google.protobuf.StringValue) value_);
+      }
+      if (valueCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (me.endergaming.common.grpc.Communication.Number) value_);
+      }
+      if (valueCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.google.protobuf.BoolValue) value_);
+      }
+      if (valueCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (me.endergaming.common.grpc.Communication.MultiStat) value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof me.endergaming.common.grpc.Communication.Value)) {
+        return super.equals(obj);
+      }
+      me.endergaming.common.grpc.Communication.Value other = (me.endergaming.common.grpc.Communication.Value) obj;
+
+      boolean result = true;
+      result = result && getValueCase().equals(
+          other.getValueCase());
+      if (!result) return false;
+      switch (valueCase_) {
+        case 1:
+          result = result && getStringValue()
+              .equals(other.getStringValue());
+          break;
+        case 2:
+          result = result && getNumberValue()
+              .equals(other.getNumberValue());
+          break;
+        case 3:
+          result = result && getBoolValue()
+              .equals(other.getBoolValue());
+          break;
+        case 4:
+          result = result && getStatsList()
+              .equals(other.getStatsList());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (valueCase_) {
+        case 1:
+          hash = (37 * hash) + STRING_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getStringValue().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + NUMBER_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getNumberValue().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + BOOL_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getBoolValue().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + STATS_LIST_FIELD_NUMBER;
+          hash = (53 * hash) + getStatsList().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static me.endergaming.common.grpc.Communication.Value parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.Value parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(me.endergaming.common.grpc.Communication.Value prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Value}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Value)
+        me.endergaming.common.grpc.Communication.ValueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return me.endergaming.common.grpc.Communication.internal_static_Value_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return me.endergaming.common.grpc.Communication.internal_static_Value_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                me.endergaming.common.grpc.Communication.Value.class, me.endergaming.common.grpc.Communication.Value.Builder.class);
+      }
+
+      // Construct using me.endergaming.common.grpc.Communication.Value.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        valueCase_ = 0;
+        value_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return me.endergaming.common.grpc.Communication.internal_static_Value_descriptor;
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.Value getDefaultInstanceForType() {
+        return me.endergaming.common.grpc.Communication.Value.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.Value build() {
+        me.endergaming.common.grpc.Communication.Value result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.Value buildPartial() {
+        me.endergaming.common.grpc.Communication.Value result = new me.endergaming.common.grpc.Communication.Value(this);
+        if (valueCase_ == 1) {
+          if (stringValueBuilder_ == null) {
+            result.value_ = value_;
+          } else {
+            result.value_ = stringValueBuilder_.build();
+          }
+        }
+        if (valueCase_ == 2) {
+          if (numberValueBuilder_ == null) {
+            result.value_ = value_;
+          } else {
+            result.value_ = numberValueBuilder_.build();
+          }
+        }
+        if (valueCase_ == 3) {
+          if (boolValueBuilder_ == null) {
+            result.value_ = value_;
+          } else {
+            result.value_ = boolValueBuilder_.build();
+          }
+        }
+        if (valueCase_ == 4) {
+          if (statsListBuilder_ == null) {
+            result.value_ = value_;
+          } else {
+            result.value_ = statsListBuilder_.build();
+          }
+        }
+        result.valueCase_ = valueCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof me.endergaming.common.grpc.Communication.Value) {
+          return mergeFrom((me.endergaming.common.grpc.Communication.Value)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(me.endergaming.common.grpc.Communication.Value other) {
+        if (other == me.endergaming.common.grpc.Communication.Value.getDefaultInstance()) return this;
+        switch (other.getValueCase()) {
+          case STRING_VALUE: {
+            mergeStringValue(other.getStringValue());
+            break;
+          }
+          case NUMBER_VALUE: {
+            mergeNumberValue(other.getNumberValue());
+            break;
+          }
+          case BOOL_VALUE: {
+            mergeBoolValue(other.getBoolValue());
+            break;
+          }
+          case STATS_LIST: {
+            mergeStatsList(other.getStatsList());
+            break;
+          }
+          case VALUE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        me.endergaming.common.grpc.Communication.Value parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (me.endergaming.common.grpc.Communication.Value) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int valueCase_ = 0;
+      private java.lang.Object value_;
+      public ValueCase
+          getValueCase() {
+        return ValueCase.forNumber(
+            valueCase_);
+      }
+
+      public Builder clearValue() {
+        valueCase_ = 0;
+        value_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> stringValueBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue string_value = 1;</code>
+       */
+      public boolean hasStringValue() {
+        return valueCase_ == 1;
+      }
+      /**
+       * <code>.google.protobuf.StringValue string_value = 1;</code>
+       */
+      public com.google.protobuf.StringValue getStringValue() {
+        if (stringValueBuilder_ == null) {
+          if (valueCase_ == 1) {
+            return (com.google.protobuf.StringValue) value_;
+          }
+          return com.google.protobuf.StringValue.getDefaultInstance();
+        } else {
+          if (valueCase_ == 1) {
+            return stringValueBuilder_.getMessage();
+          }
+          return com.google.protobuf.StringValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue string_value = 1;</code>
+       */
+      public Builder setStringValue(com.google.protobuf.StringValue value) {
+        if (stringValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          stringValueBuilder_.setMessage(value);
+        }
+        valueCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue string_value = 1;</code>
+       */
+      public Builder setStringValue(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (stringValueBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          stringValueBuilder_.setMessage(builderForValue.build());
+        }
+        valueCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue string_value = 1;</code>
+       */
+      public Builder mergeStringValue(com.google.protobuf.StringValue value) {
+        if (stringValueBuilder_ == null) {
+          if (valueCase_ == 1 &&
+              value_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            value_ = com.google.protobuf.StringValue.newBuilder((com.google.protobuf.StringValue) value_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          if (valueCase_ == 1) {
+            stringValueBuilder_.mergeFrom(value);
+          }
+          stringValueBuilder_.setMessage(value);
+        }
+        valueCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue string_value = 1;</code>
+       */
+      public Builder clearStringValue() {
+        if (stringValueBuilder_ == null) {
+          if (valueCase_ == 1) {
+            valueCase_ = 0;
+            value_ = null;
+            onChanged();
+          }
+        } else {
+          if (valueCase_ == 1) {
+            valueCase_ = 0;
+            value_ = null;
+          }
+          stringValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue string_value = 1;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getStringValueBuilder() {
+        return getStringValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue string_value = 1;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getStringValueOrBuilder() {
+        if ((valueCase_ == 1) && (stringValueBuilder_ != null)) {
+          return stringValueBuilder_.getMessageOrBuilder();
+        } else {
+          if (valueCase_ == 1) {
+            return (com.google.protobuf.StringValue) value_;
+          }
+          return com.google.protobuf.StringValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue string_value = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getStringValueFieldBuilder() {
+        if (stringValueBuilder_ == null) {
+          if (!(valueCase_ == 1)) {
+            value_ = com.google.protobuf.StringValue.getDefaultInstance();
+          }
+          stringValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  (com.google.protobuf.StringValue) value_,
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        valueCase_ = 1;
+        onChanged();;
+        return stringValueBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          me.endergaming.common.grpc.Communication.Number, me.endergaming.common.grpc.Communication.Number.Builder, me.endergaming.common.grpc.Communication.NumberOrBuilder> numberValueBuilder_;
+      /**
+       * <code>.Number number_value = 2;</code>
+       */
+      public boolean hasNumberValue() {
+        return valueCase_ == 2;
+      }
+      /**
+       * <code>.Number number_value = 2;</code>
+       */
+      public me.endergaming.common.grpc.Communication.Number getNumberValue() {
+        if (numberValueBuilder_ == null) {
+          if (valueCase_ == 2) {
+            return (me.endergaming.common.grpc.Communication.Number) value_;
+          }
+          return me.endergaming.common.grpc.Communication.Number.getDefaultInstance();
+        } else {
+          if (valueCase_ == 2) {
+            return numberValueBuilder_.getMessage();
+          }
+          return me.endergaming.common.grpc.Communication.Number.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.Number number_value = 2;</code>
+       */
+      public Builder setNumberValue(me.endergaming.common.grpc.Communication.Number value) {
+        if (numberValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          numberValueBuilder_.setMessage(value);
+        }
+        valueCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.Number number_value = 2;</code>
+       */
+      public Builder setNumberValue(
+          me.endergaming.common.grpc.Communication.Number.Builder builderForValue) {
+        if (numberValueBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          numberValueBuilder_.setMessage(builderForValue.build());
+        }
+        valueCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.Number number_value = 2;</code>
+       */
+      public Builder mergeNumberValue(me.endergaming.common.grpc.Communication.Number value) {
+        if (numberValueBuilder_ == null) {
+          if (valueCase_ == 2 &&
+              value_ != me.endergaming.common.grpc.Communication.Number.getDefaultInstance()) {
+            value_ = me.endergaming.common.grpc.Communication.Number.newBuilder((me.endergaming.common.grpc.Communication.Number) value_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          if (valueCase_ == 2) {
+            numberValueBuilder_.mergeFrom(value);
+          }
+          numberValueBuilder_.setMessage(value);
+        }
+        valueCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.Number number_value = 2;</code>
+       */
+      public Builder clearNumberValue() {
+        if (numberValueBuilder_ == null) {
+          if (valueCase_ == 2) {
+            valueCase_ = 0;
+            value_ = null;
+            onChanged();
+          }
+        } else {
+          if (valueCase_ == 2) {
+            valueCase_ = 0;
+            value_ = null;
+          }
+          numberValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.Number number_value = 2;</code>
+       */
+      public me.endergaming.common.grpc.Communication.Number.Builder getNumberValueBuilder() {
+        return getNumberValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Number number_value = 2;</code>
+       */
+      public me.endergaming.common.grpc.Communication.NumberOrBuilder getNumberValueOrBuilder() {
+        if ((valueCase_ == 2) && (numberValueBuilder_ != null)) {
+          return numberValueBuilder_.getMessageOrBuilder();
+        } else {
+          if (valueCase_ == 2) {
+            return (me.endergaming.common.grpc.Communication.Number) value_;
+          }
+          return me.endergaming.common.grpc.Communication.Number.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.Number number_value = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          me.endergaming.common.grpc.Communication.Number, me.endergaming.common.grpc.Communication.Number.Builder, me.endergaming.common.grpc.Communication.NumberOrBuilder> 
+          getNumberValueFieldBuilder() {
+        if (numberValueBuilder_ == null) {
+          if (!(valueCase_ == 2)) {
+            value_ = me.endergaming.common.grpc.Communication.Number.getDefaultInstance();
+          }
+          numberValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              me.endergaming.common.grpc.Communication.Number, me.endergaming.common.grpc.Communication.Number.Builder, me.endergaming.common.grpc.Communication.NumberOrBuilder>(
+                  (me.endergaming.common.grpc.Communication.Number) value_,
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        valueCase_ = 2;
+        onChanged();;
+        return numberValueBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> boolValueBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+       */
+      public boolean hasBoolValue() {
+        return valueCase_ == 3;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+       */
+      public com.google.protobuf.BoolValue getBoolValue() {
+        if (boolValueBuilder_ == null) {
+          if (valueCase_ == 3) {
+            return (com.google.protobuf.BoolValue) value_;
+          }
+          return com.google.protobuf.BoolValue.getDefaultInstance();
+        } else {
+          if (valueCase_ == 3) {
+            return boolValueBuilder_.getMessage();
+          }
+          return com.google.protobuf.BoolValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+       */
+      public Builder setBoolValue(com.google.protobuf.BoolValue value) {
+        if (boolValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          boolValueBuilder_.setMessage(value);
+        }
+        valueCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+       */
+      public Builder setBoolValue(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (boolValueBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          boolValueBuilder_.setMessage(builderForValue.build());
+        }
+        valueCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+       */
+      public Builder mergeBoolValue(com.google.protobuf.BoolValue value) {
+        if (boolValueBuilder_ == null) {
+          if (valueCase_ == 3 &&
+              value_ != com.google.protobuf.BoolValue.getDefaultInstance()) {
+            value_ = com.google.protobuf.BoolValue.newBuilder((com.google.protobuf.BoolValue) value_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          if (valueCase_ == 3) {
+            boolValueBuilder_.mergeFrom(value);
+          }
+          boolValueBuilder_.setMessage(value);
+        }
+        valueCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+       */
+      public Builder clearBoolValue() {
+        if (boolValueBuilder_ == null) {
+          if (valueCase_ == 3) {
+            valueCase_ = 0;
+            value_ = null;
+            onChanged();
+          }
+        } else {
+          if (valueCase_ == 3) {
+            valueCase_ = 0;
+            value_ = null;
+          }
+          boolValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getBoolValueBuilder() {
+        return getBoolValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getBoolValueOrBuilder() {
+        if ((valueCase_ == 3) && (boolValueBuilder_ != null)) {
+          return boolValueBuilder_.getMessageOrBuilder();
+        } else {
+          if (valueCase_ == 3) {
+            return (com.google.protobuf.BoolValue) value_;
+          }
+          return com.google.protobuf.BoolValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue bool_value = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getBoolValueFieldBuilder() {
+        if (boolValueBuilder_ == null) {
+          if (!(valueCase_ == 3)) {
+            value_ = com.google.protobuf.BoolValue.getDefaultInstance();
+          }
+          boolValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  (com.google.protobuf.BoolValue) value_,
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        valueCase_ = 3;
+        onChanged();;
+        return boolValueBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          me.endergaming.common.grpc.Communication.MultiStat, me.endergaming.common.grpc.Communication.MultiStat.Builder, me.endergaming.common.grpc.Communication.MultiStatOrBuilder> statsListBuilder_;
+      /**
+       * <code>.MultiStat stats_list = 4;</code>
+       */
+      public boolean hasStatsList() {
+        return valueCase_ == 4;
+      }
+      /**
+       * <code>.MultiStat stats_list = 4;</code>
+       */
+      public me.endergaming.common.grpc.Communication.MultiStat getStatsList() {
+        if (statsListBuilder_ == null) {
+          if (valueCase_ == 4) {
+            return (me.endergaming.common.grpc.Communication.MultiStat) value_;
+          }
+          return me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance();
+        } else {
+          if (valueCase_ == 4) {
+            return statsListBuilder_.getMessage();
+          }
+          return me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.MultiStat stats_list = 4;</code>
+       */
+      public Builder setStatsList(me.endergaming.common.grpc.Communication.MultiStat value) {
+        if (statsListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          statsListBuilder_.setMessage(value);
+        }
+        valueCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.MultiStat stats_list = 4;</code>
+       */
+      public Builder setStatsList(
+          me.endergaming.common.grpc.Communication.MultiStat.Builder builderForValue) {
+        if (statsListBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          statsListBuilder_.setMessage(builderForValue.build());
+        }
+        valueCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.MultiStat stats_list = 4;</code>
+       */
+      public Builder mergeStatsList(me.endergaming.common.grpc.Communication.MultiStat value) {
+        if (statsListBuilder_ == null) {
+          if (valueCase_ == 4 &&
+              value_ != me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance()) {
+            value_ = me.endergaming.common.grpc.Communication.MultiStat.newBuilder((me.endergaming.common.grpc.Communication.MultiStat) value_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          if (valueCase_ == 4) {
+            statsListBuilder_.mergeFrom(value);
+          }
+          statsListBuilder_.setMessage(value);
+        }
+        valueCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.MultiStat stats_list = 4;</code>
+       */
+      public Builder clearStatsList() {
+        if (statsListBuilder_ == null) {
+          if (valueCase_ == 4) {
+            valueCase_ = 0;
+            value_ = null;
+            onChanged();
+          }
+        } else {
+          if (valueCase_ == 4) {
+            valueCase_ = 0;
+            value_ = null;
+          }
+          statsListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.MultiStat stats_list = 4;</code>
+       */
+      public me.endergaming.common.grpc.Communication.MultiStat.Builder getStatsListBuilder() {
+        return getStatsListFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.MultiStat stats_list = 4;</code>
+       */
+      public me.endergaming.common.grpc.Communication.MultiStatOrBuilder getStatsListOrBuilder() {
+        if ((valueCase_ == 4) && (statsListBuilder_ != null)) {
+          return statsListBuilder_.getMessageOrBuilder();
+        } else {
+          if (valueCase_ == 4) {
+            return (me.endergaming.common.grpc.Communication.MultiStat) value_;
+          }
+          return me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.MultiStat stats_list = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          me.endergaming.common.grpc.Communication.MultiStat, me.endergaming.common.grpc.Communication.MultiStat.Builder, me.endergaming.common.grpc.Communication.MultiStatOrBuilder> 
+          getStatsListFieldBuilder() {
+        if (statsListBuilder_ == null) {
+          if (!(valueCase_ == 4)) {
+            value_ = me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance();
+          }
+          statsListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              me.endergaming.common.grpc.Communication.MultiStat, me.endergaming.common.grpc.Communication.MultiStat.Builder, me.endergaming.common.grpc.Communication.MultiStatOrBuilder>(
+                  (me.endergaming.common.grpc.Communication.MultiStat) value_,
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        valueCase_ = 4;
+        onChanged();;
+        return statsListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Value)
+    }
+
+    // @@protoc_insertion_point(class_scope:Value)
+    private static final me.endergaming.common.grpc.Communication.Value DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new me.endergaming.common.grpc.Communication.Value();
+    }
+
+    public static me.endergaming.common.grpc.Communication.Value getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Value>
+        PARSER = new com.google.protobuf.AbstractParser<Value>() {
+      @java.lang.Override
+      public Value parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Value(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Value> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Value> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public me.endergaming.common.grpc.Communication.Value getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StatOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Stat)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1;</code>
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>.Value value = 2;</code>
+     */
+    boolean hasValue();
+    /**
+     * <code>.Value value = 2;</code>
+     */
+    me.endergaming.common.grpc.Communication.Value getValue();
+    /**
+     * <code>.Value value = 2;</code>
+     */
+    me.endergaming.common.grpc.Communication.ValueOrBuilder getValueOrBuilder();
+  }
+  /**
+   * Protobuf type {@code Stat}
+   */
+  public  static final class Stat extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Stat)
+      StatOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Stat.newBuilder() to construct.
+    private Stat(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Stat() {
+      key_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Stat(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 18: {
+              me.endergaming.common.grpc.Communication.Value.Builder subBuilder = null;
+              if (value_ != null) {
+                subBuilder = value_.toBuilder();
+              }
+              value_ = input.readMessage(me.endergaming.common.grpc.Communication.Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(value_);
+                value_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return me.endergaming.common.grpc.Communication.internal_static_Stat_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return me.endergaming.common.grpc.Communication.internal_static_Stat_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              me.endergaming.common.grpc.Communication.Stat.class, me.endergaming.common.grpc.Communication.Stat.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object key_;
+    /**
+     * <code>string key = 1;</code>
+     */
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private me.endergaming.common.grpc.Communication.Value value_;
+    /**
+     * <code>.Value value = 2;</code>
+     */
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <code>.Value value = 2;</code>
+     */
+    public me.endergaming.common.grpc.Communication.Value getValue() {
+      return value_ == null ? me.endergaming.common.grpc.Communication.Value.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.Value value = 2;</code>
+     */
+    public me.endergaming.common.grpc.Communication.ValueOrBuilder getValueOrBuilder() {
+      return getValue();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (value_ != null) {
+        output.writeMessage(2, getValue());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (value_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getValue());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof me.endergaming.common.grpc.Communication.Stat)) {
+        return super.equals(obj);
+      }
+      me.endergaming.common.grpc.Communication.Stat other = (me.endergaming.common.grpc.Communication.Stat) obj;
+
+      boolean result = true;
+      result = result && getKey()
+          .equals(other.getKey());
+      result = result && (hasValue() == other.hasValue());
+      if (hasValue()) {
+        result = result && getValue()
+            .equals(other.getValue());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static me.endergaming.common.grpc.Communication.Stat parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.Stat parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(me.endergaming.common.grpc.Communication.Stat prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Stat}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Stat)
+        me.endergaming.common.grpc.Communication.StatOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return me.endergaming.common.grpc.Communication.internal_static_Stat_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return me.endergaming.common.grpc.Communication.internal_static_Stat_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                me.endergaming.common.grpc.Communication.Stat.class, me.endergaming.common.grpc.Communication.Stat.Builder.class);
+      }
+
+      // Construct using me.endergaming.common.grpc.Communication.Stat.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        key_ = "";
+
+        if (valueBuilder_ == null) {
+          value_ = null;
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return me.endergaming.common.grpc.Communication.internal_static_Stat_descriptor;
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.Stat getDefaultInstanceForType() {
+        return me.endergaming.common.grpc.Communication.Stat.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.Stat build() {
+        me.endergaming.common.grpc.Communication.Stat result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.Stat buildPartial() {
+        me.endergaming.common.grpc.Communication.Stat result = new me.endergaming.common.grpc.Communication.Stat(this);
+        result.key_ = key_;
+        if (valueBuilder_ == null) {
+          result.value_ = value_;
+        } else {
+          result.value_ = valueBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof me.endergaming.common.grpc.Communication.Stat) {
+          return mergeFrom((me.endergaming.common.grpc.Communication.Stat)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(me.endergaming.common.grpc.Communication.Stat other) {
+        if (other == me.endergaming.common.grpc.Communication.Stat.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        if (other.hasValue()) {
+          mergeValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        me.endergaming.common.grpc.Communication.Stat parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (me.endergaming.common.grpc.Communication.Stat) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1;</code>
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1;</code>
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1;</code>
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private me.endergaming.common.grpc.Communication.Value value_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          me.endergaming.common.grpc.Communication.Value, me.endergaming.common.grpc.Communication.Value.Builder, me.endergaming.common.grpc.Communication.ValueOrBuilder> valueBuilder_;
+      /**
+       * <code>.Value value = 2;</code>
+       */
+      public boolean hasValue() {
+        return valueBuilder_ != null || value_ != null;
+      }
+      /**
+       * <code>.Value value = 2;</code>
+       */
+      public me.endergaming.common.grpc.Communication.Value getValue() {
+        if (valueBuilder_ == null) {
+          return value_ == null ? me.endergaming.common.grpc.Communication.Value.getDefaultInstance() : value_;
+        } else {
+          return valueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Value value = 2;</code>
+       */
+      public Builder setValue(me.endergaming.common.grpc.Communication.Value value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Value value = 2;</code>
+       */
+      public Builder setValue(
+          me.endergaming.common.grpc.Communication.Value.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Value value = 2;</code>
+       */
+      public Builder mergeValue(me.endergaming.common.grpc.Communication.Value value) {
+        if (valueBuilder_ == null) {
+          if (value_ != null) {
+            value_ =
+              me.endergaming.common.grpc.Communication.Value.newBuilder(value_).mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          valueBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Value value = 2;</code>
+       */
+      public Builder clearValue() {
+        if (valueBuilder_ == null) {
+          value_ = null;
+          onChanged();
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Value value = 2;</code>
+       */
+      public me.endergaming.common.grpc.Communication.Value.Builder getValueBuilder() {
+        
+        onChanged();
+        return getValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Value value = 2;</code>
+       */
+      public me.endergaming.common.grpc.Communication.ValueOrBuilder getValueOrBuilder() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilder();
+        } else {
+          return value_ == null ?
+              me.endergaming.common.grpc.Communication.Value.getDefaultInstance() : value_;
+        }
+      }
+      /**
+       * <code>.Value value = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          me.endergaming.common.grpc.Communication.Value, me.endergaming.common.grpc.Communication.Value.Builder, me.endergaming.common.grpc.Communication.ValueOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              me.endergaming.common.grpc.Communication.Value, me.endergaming.common.grpc.Communication.Value.Builder, me.endergaming.common.grpc.Communication.ValueOrBuilder>(
+                  getValue(),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Stat)
+    }
+
+    // @@protoc_insertion_point(class_scope:Stat)
+    private static final me.endergaming.common.grpc.Communication.Stat DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new me.endergaming.common.grpc.Communication.Stat();
+    }
+
+    public static me.endergaming.common.grpc.Communication.Stat getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Stat>
+        PARSER = new com.google.protobuf.AbstractParser<Stat>() {
+      @java.lang.Override
+      public Stat parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Stat(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Stat> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Stat> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public me.endergaming.common.grpc.Communication.Stat getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MultiStatOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:MultiStat)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Stat stats = 1;</code>
+     */
+    java.util.List<me.endergaming.common.grpc.Communication.Stat> 
+        getStatsList();
+    /**
+     * <code>repeated .Stat stats = 1;</code>
+     */
+    me.endergaming.common.grpc.Communication.Stat getStats(int index);
+    /**
+     * <code>repeated .Stat stats = 1;</code>
+     */
+    int getStatsCount();
+    /**
+     * <code>repeated .Stat stats = 1;</code>
+     */
+    java.util.List<? extends me.endergaming.common.grpc.Communication.StatOrBuilder> 
+        getStatsOrBuilderList();
+    /**
+     * <code>repeated .Stat stats = 1;</code>
+     */
+    me.endergaming.common.grpc.Communication.StatOrBuilder getStatsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code MultiStat}
+   */
+  public  static final class MultiStat extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:MultiStat)
+      MultiStatOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MultiStat.newBuilder() to construct.
+    private MultiStat(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MultiStat() {
+      stats_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MultiStat(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                stats_ = new java.util.ArrayList<me.endergaming.common.grpc.Communication.Stat>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              stats_.add(
+                  input.readMessage(me.endergaming.common.grpc.Communication.Stat.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          stats_ = java.util.Collections.unmodifiableList(stats_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return me.endergaming.common.grpc.Communication.internal_static_MultiStat_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return me.endergaming.common.grpc.Communication.internal_static_MultiStat_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              me.endergaming.common.grpc.Communication.MultiStat.class, me.endergaming.common.grpc.Communication.MultiStat.Builder.class);
+    }
+
+    public static final int STATS_FIELD_NUMBER = 1;
+    private java.util.List<me.endergaming.common.grpc.Communication.Stat> stats_;
+    /**
+     * <code>repeated .Stat stats = 1;</code>
+     */
+    public java.util.List<me.endergaming.common.grpc.Communication.Stat> getStatsList() {
+      return stats_;
+    }
+    /**
+     * <code>repeated .Stat stats = 1;</code>
+     */
+    public java.util.List<? extends me.endergaming.common.grpc.Communication.StatOrBuilder> 
+        getStatsOrBuilderList() {
+      return stats_;
+    }
+    /**
+     * <code>repeated .Stat stats = 1;</code>
+     */
+    public int getStatsCount() {
+      return stats_.size();
+    }
+    /**
+     * <code>repeated .Stat stats = 1;</code>
+     */
+    public me.endergaming.common.grpc.Communication.Stat getStats(int index) {
+      return stats_.get(index);
+    }
+    /**
+     * <code>repeated .Stat stats = 1;</code>
+     */
+    public me.endergaming.common.grpc.Communication.StatOrBuilder getStatsOrBuilder(
+        int index) {
+      return stats_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < stats_.size(); i++) {
+        output.writeMessage(1, stats_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < stats_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, stats_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof me.endergaming.common.grpc.Communication.MultiStat)) {
+        return super.equals(obj);
+      }
+      me.endergaming.common.grpc.Communication.MultiStat other = (me.endergaming.common.grpc.Communication.MultiStat) obj;
+
+      boolean result = true;
+      result = result && getStatsList()
+          .equals(other.getStatsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStatsCount() > 0) {
+        hash = (37 * hash) + STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static me.endergaming.common.grpc.Communication.MultiStat parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.MultiStat parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(me.endergaming.common.grpc.Communication.MultiStat prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MultiStat}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:MultiStat)
+        me.endergaming.common.grpc.Communication.MultiStatOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return me.endergaming.common.grpc.Communication.internal_static_MultiStat_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return me.endergaming.common.grpc.Communication.internal_static_MultiStat_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                me.endergaming.common.grpc.Communication.MultiStat.class, me.endergaming.common.grpc.Communication.MultiStat.Builder.class);
+      }
+
+      // Construct using me.endergaming.common.grpc.Communication.MultiStat.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStatsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (statsBuilder_ == null) {
+          stats_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          statsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return me.endergaming.common.grpc.Communication.internal_static_MultiStat_descriptor;
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.MultiStat getDefaultInstanceForType() {
+        return me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.MultiStat build() {
+        me.endergaming.common.grpc.Communication.MultiStat result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.MultiStat buildPartial() {
+        me.endergaming.common.grpc.Communication.MultiStat result = new me.endergaming.common.grpc.Communication.MultiStat(this);
+        int from_bitField0_ = bitField0_;
+        if (statsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            stats_ = java.util.Collections.unmodifiableList(stats_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.stats_ = stats_;
+        } else {
+          result.stats_ = statsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof me.endergaming.common.grpc.Communication.MultiStat) {
+          return mergeFrom((me.endergaming.common.grpc.Communication.MultiStat)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(me.endergaming.common.grpc.Communication.MultiStat other) {
+        if (other == me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance()) return this;
+        if (statsBuilder_ == null) {
+          if (!other.stats_.isEmpty()) {
+            if (stats_.isEmpty()) {
+              stats_ = other.stats_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStatsIsMutable();
+              stats_.addAll(other.stats_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stats_.isEmpty()) {
+            if (statsBuilder_.isEmpty()) {
+              statsBuilder_.dispose();
+              statsBuilder_ = null;
+              stats_ = other.stats_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              statsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStatsFieldBuilder() : null;
+            } else {
+              statsBuilder_.addAllMessages(other.stats_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        me.endergaming.common.grpc.Communication.MultiStat parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (me.endergaming.common.grpc.Communication.MultiStat) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<me.endergaming.common.grpc.Communication.Stat> stats_ =
+        java.util.Collections.emptyList();
+      private void ensureStatsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          stats_ = new java.util.ArrayList<me.endergaming.common.grpc.Communication.Stat>(stats_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          me.endergaming.common.grpc.Communication.Stat, me.endergaming.common.grpc.Communication.Stat.Builder, me.endergaming.common.grpc.Communication.StatOrBuilder> statsBuilder_;
+
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public java.util.List<me.endergaming.common.grpc.Communication.Stat> getStatsList() {
+        if (statsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stats_);
+        } else {
+          return statsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public int getStatsCount() {
+        if (statsBuilder_ == null) {
+          return stats_.size();
+        } else {
+          return statsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public me.endergaming.common.grpc.Communication.Stat getStats(int index) {
+        if (statsBuilder_ == null) {
+          return stats_.get(index);
+        } else {
+          return statsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public Builder setStats(
+          int index, me.endergaming.common.grpc.Communication.Stat value) {
+        if (statsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStatsIsMutable();
+          stats_.set(index, value);
+          onChanged();
+        } else {
+          statsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public Builder setStats(
+          int index, me.endergaming.common.grpc.Communication.Stat.Builder builderForValue) {
+        if (statsBuilder_ == null) {
+          ensureStatsIsMutable();
+          stats_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          statsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public Builder addStats(me.endergaming.common.grpc.Communication.Stat value) {
+        if (statsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStatsIsMutable();
+          stats_.add(value);
+          onChanged();
+        } else {
+          statsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public Builder addStats(
+          int index, me.endergaming.common.grpc.Communication.Stat value) {
+        if (statsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStatsIsMutable();
+          stats_.add(index, value);
+          onChanged();
+        } else {
+          statsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public Builder addStats(
+          me.endergaming.common.grpc.Communication.Stat.Builder builderForValue) {
+        if (statsBuilder_ == null) {
+          ensureStatsIsMutable();
+          stats_.add(builderForValue.build());
+          onChanged();
+        } else {
+          statsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public Builder addStats(
+          int index, me.endergaming.common.grpc.Communication.Stat.Builder builderForValue) {
+        if (statsBuilder_ == null) {
+          ensureStatsIsMutable();
+          stats_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          statsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public Builder addAllStats(
+          java.lang.Iterable<? extends me.endergaming.common.grpc.Communication.Stat> values) {
+        if (statsBuilder_ == null) {
+          ensureStatsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stats_);
+          onChanged();
+        } else {
+          statsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public Builder clearStats() {
+        if (statsBuilder_ == null) {
+          stats_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          statsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public Builder removeStats(int index) {
+        if (statsBuilder_ == null) {
+          ensureStatsIsMutable();
+          stats_.remove(index);
+          onChanged();
+        } else {
+          statsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public me.endergaming.common.grpc.Communication.Stat.Builder getStatsBuilder(
+          int index) {
+        return getStatsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public me.endergaming.common.grpc.Communication.StatOrBuilder getStatsOrBuilder(
+          int index) {
+        if (statsBuilder_ == null) {
+          return stats_.get(index);  } else {
+          return statsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public java.util.List<? extends me.endergaming.common.grpc.Communication.StatOrBuilder> 
+           getStatsOrBuilderList() {
+        if (statsBuilder_ != null) {
+          return statsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stats_);
+        }
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public me.endergaming.common.grpc.Communication.Stat.Builder addStatsBuilder() {
+        return getStatsFieldBuilder().addBuilder(
+            me.endergaming.common.grpc.Communication.Stat.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public me.endergaming.common.grpc.Communication.Stat.Builder addStatsBuilder(
+          int index) {
+        return getStatsFieldBuilder().addBuilder(
+            index, me.endergaming.common.grpc.Communication.Stat.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Stat stats = 1;</code>
+       */
+      public java.util.List<me.endergaming.common.grpc.Communication.Stat.Builder> 
+           getStatsBuilderList() {
+        return getStatsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          me.endergaming.common.grpc.Communication.Stat, me.endergaming.common.grpc.Communication.Stat.Builder, me.endergaming.common.grpc.Communication.StatOrBuilder> 
+          getStatsFieldBuilder() {
+        if (statsBuilder_ == null) {
+          statsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              me.endergaming.common.grpc.Communication.Stat, me.endergaming.common.grpc.Communication.Stat.Builder, me.endergaming.common.grpc.Communication.StatOrBuilder>(
+                  stats_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          stats_ = null;
+        }
+        return statsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:MultiStat)
+    }
+
+    // @@protoc_insertion_point(class_scope:MultiStat)
+    private static final me.endergaming.common.grpc.Communication.MultiStat DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new me.endergaming.common.grpc.Communication.MultiStat();
+    }
+
+    public static me.endergaming.common.grpc.Communication.MultiStat getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MultiStat>
+        PARSER = new com.google.protobuf.AbstractParser<MultiStat>() {
+      @java.lang.Override
+      public MultiStat parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MultiStat(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MultiStat> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MultiStat> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public me.endergaming.common.grpc.Communication.MultiStat getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StatStreamResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:StatStreamResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1;</code>
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>.MultiStat stats = 2;</code>
+     */
+    boolean hasStats();
+    /**
+     * <code>.MultiStat stats = 2;</code>
+     */
+    me.endergaming.common.grpc.Communication.MultiStat getStats();
+    /**
+     * <code>.MultiStat stats = 2;</code>
+     */
+    me.endergaming.common.grpc.Communication.MultiStatOrBuilder getStatsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code StatStreamResponse}
+   */
+  public  static final class StatStreamResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:StatStreamResponse)
+      StatStreamResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StatStreamResponse.newBuilder() to construct.
+    private StatStreamResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StatStreamResponse() {
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StatStreamResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              owner_ = s;
+              break;
+            }
+            case 18: {
+              me.endergaming.common.grpc.Communication.MultiStat.Builder subBuilder = null;
+              if (stats_ != null) {
+                subBuilder = stats_.toBuilder();
+              }
+              stats_ = input.readMessage(me.endergaming.common.grpc.Communication.MultiStat.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(stats_);
+                stats_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return me.endergaming.common.grpc.Communication.internal_static_StatStreamResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return me.endergaming.common.grpc.Communication.internal_static_StatStreamResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              me.endergaming.common.grpc.Communication.StatStreamResponse.class, me.endergaming.common.grpc.Communication.StatStreamResponse.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object owner_;
+    /**
+     * <code>string owner = 1;</code>
+     */
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATS_FIELD_NUMBER = 2;
+    private me.endergaming.common.grpc.Communication.MultiStat stats_;
+    /**
+     * <code>.MultiStat stats = 2;</code>
+     */
+    public boolean hasStats() {
+      return stats_ != null;
+    }
+    /**
+     * <code>.MultiStat stats = 2;</code>
+     */
+    public me.endergaming.common.grpc.Communication.MultiStat getStats() {
+      return stats_ == null ? me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance() : stats_;
+    }
+    /**
+     * <code>.MultiStat stats = 2;</code>
+     */
+    public me.endergaming.common.grpc.Communication.MultiStatOrBuilder getStatsOrBuilder() {
+      return getStats();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getOwnerBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (stats_ != null) {
+        output.writeMessage(2, getStats());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getOwnerBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (stats_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getStats());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof me.endergaming.common.grpc.Communication.StatStreamResponse)) {
+        return super.equals(obj);
+      }
+      me.endergaming.common.grpc.Communication.StatStreamResponse other = (me.endergaming.common.grpc.Communication.StatStreamResponse) obj;
+
+      boolean result = true;
+      result = result && getOwner()
+          .equals(other.getOwner());
+      result = result && (hasStats() == other.hasStats());
+      if (hasStats()) {
+        result = result && getStats()
+            .equals(other.getStats());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      if (hasStats()) {
+        hash = (37 * hash) + STATS_FIELD_NUMBER;
+        hash = (53 * hash) + getStats().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(me.endergaming.common.grpc.Communication.StatStreamResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code StatStreamResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:StatStreamResponse)
+        me.endergaming.common.grpc.Communication.StatStreamResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return me.endergaming.common.grpc.Communication.internal_static_StatStreamResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return me.endergaming.common.grpc.Communication.internal_static_StatStreamResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                me.endergaming.common.grpc.Communication.StatStreamResponse.class, me.endergaming.common.grpc.Communication.StatStreamResponse.Builder.class);
+      }
+
+      // Construct using me.endergaming.common.grpc.Communication.StatStreamResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        owner_ = "";
+
+        if (statsBuilder_ == null) {
+          stats_ = null;
+        } else {
+          stats_ = null;
+          statsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return me.endergaming.common.grpc.Communication.internal_static_StatStreamResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.StatStreamResponse getDefaultInstanceForType() {
+        return me.endergaming.common.grpc.Communication.StatStreamResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.StatStreamResponse build() {
+        me.endergaming.common.grpc.Communication.StatStreamResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public me.endergaming.common.grpc.Communication.StatStreamResponse buildPartial() {
+        me.endergaming.common.grpc.Communication.StatStreamResponse result = new me.endergaming.common.grpc.Communication.StatStreamResponse(this);
+        result.owner_ = owner_;
+        if (statsBuilder_ == null) {
+          result.stats_ = stats_;
+        } else {
+          result.stats_ = statsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof me.endergaming.common.grpc.Communication.StatStreamResponse) {
+          return mergeFrom((me.endergaming.common.grpc.Communication.StatStreamResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(me.endergaming.common.grpc.Communication.StatStreamResponse other) {
+        if (other == me.endergaming.common.grpc.Communication.StatStreamResponse.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          onChanged();
+        }
+        if (other.hasStats()) {
+          mergeStats(other.getStats());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        me.endergaming.common.grpc.Communication.StatStreamResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (me.endergaming.common.grpc.Communication.StatStreamResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1;</code>
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1;</code>
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        owner_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1;</code>
+       */
+      public Builder clearOwner() {
+        
+        owner_ = getDefaultInstance().getOwner();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1;</code>
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        owner_ = value;
+        onChanged();
+        return this;
+      }
+
+      private me.endergaming.common.grpc.Communication.MultiStat stats_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          me.endergaming.common.grpc.Communication.MultiStat, me.endergaming.common.grpc.Communication.MultiStat.Builder, me.endergaming.common.grpc.Communication.MultiStatOrBuilder> statsBuilder_;
+      /**
+       * <code>.MultiStat stats = 2;</code>
+       */
+      public boolean hasStats() {
+        return statsBuilder_ != null || stats_ != null;
+      }
+      /**
+       * <code>.MultiStat stats = 2;</code>
+       */
+      public me.endergaming.common.grpc.Communication.MultiStat getStats() {
+        if (statsBuilder_ == null) {
+          return stats_ == null ? me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance() : stats_;
+        } else {
+          return statsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.MultiStat stats = 2;</code>
+       */
+      public Builder setStats(me.endergaming.common.grpc.Communication.MultiStat value) {
+        if (statsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stats_ = value;
+          onChanged();
+        } else {
+          statsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.MultiStat stats = 2;</code>
+       */
+      public Builder setStats(
+          me.endergaming.common.grpc.Communication.MultiStat.Builder builderForValue) {
+        if (statsBuilder_ == null) {
+          stats_ = builderForValue.build();
+          onChanged();
+        } else {
+          statsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.MultiStat stats = 2;</code>
+       */
+      public Builder mergeStats(me.endergaming.common.grpc.Communication.MultiStat value) {
+        if (statsBuilder_ == null) {
+          if (stats_ != null) {
+            stats_ =
+              me.endergaming.common.grpc.Communication.MultiStat.newBuilder(stats_).mergeFrom(value).buildPartial();
+          } else {
+            stats_ = value;
+          }
+          onChanged();
+        } else {
+          statsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.MultiStat stats = 2;</code>
+       */
+      public Builder clearStats() {
+        if (statsBuilder_ == null) {
+          stats_ = null;
+          onChanged();
+        } else {
+          stats_ = null;
+          statsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.MultiStat stats = 2;</code>
+       */
+      public me.endergaming.common.grpc.Communication.MultiStat.Builder getStatsBuilder() {
+        
+        onChanged();
+        return getStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.MultiStat stats = 2;</code>
+       */
+      public me.endergaming.common.grpc.Communication.MultiStatOrBuilder getStatsOrBuilder() {
+        if (statsBuilder_ != null) {
+          return statsBuilder_.getMessageOrBuilder();
+        } else {
+          return stats_ == null ?
+              me.endergaming.common.grpc.Communication.MultiStat.getDefaultInstance() : stats_;
+        }
+      }
+      /**
+       * <code>.MultiStat stats = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          me.endergaming.common.grpc.Communication.MultiStat, me.endergaming.common.grpc.Communication.MultiStat.Builder, me.endergaming.common.grpc.Communication.MultiStatOrBuilder> 
+          getStatsFieldBuilder() {
+        if (statsBuilder_ == null) {
+          statsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              me.endergaming.common.grpc.Communication.MultiStat, me.endergaming.common.grpc.Communication.MultiStat.Builder, me.endergaming.common.grpc.Communication.MultiStatOrBuilder>(
+                  getStats(),
+                  getParentForChildren(),
+                  isClean());
+          stats_ = null;
+        }
+        return statsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:StatStreamResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:StatStreamResponse)
+    private static final me.endergaming.common.grpc.Communication.StatStreamResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new me.endergaming.common.grpc.Communication.StatStreamResponse();
+    }
+
+    public static me.endergaming.common.grpc.Communication.StatStreamResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StatStreamResponse>
+        PARSER = new com.google.protobuf.AbstractParser<StatStreamResponse>() {
+      @java.lang.Override
+      public StatStreamResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StatStreamResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StatStreamResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StatStreamResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public me.endergaming.common.grpc.Communication.StatStreamResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface EmptyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Empty)
       com.google.protobuf.MessageOrBuilder {
@@ -6906,6 +11878,31 @@ public final class Communication {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_StatsConnectionResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Number_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Number_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Value_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Value_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Stat_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Stat_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_MultiStat_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_MultiStat_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_StatStreamResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_StatStreamResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Empty_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6919,27 +11916,44 @@ public final class Communication {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023communication.proto\"A\n\004UUID\022\033\n\023mostSig" +
-      "nificantBits\030\001 \001(\022\022\034\n\024leastSignificantBi" +
-      "ts\030\002 \001(\022\"\024\n\004Text\022\014\n\004text\030\001 \001(\t\"+\n\006Player" +
-      "\022\023\n\004uuid\030\001 \001(\0132\005.UUID\022\014\n\004name\030\002 \001(\t\"\256\001\n\005" +
-      "Stats\022\025\n\005kills\030\001 \001(\0132\006.Kills\022\016\n\006deaths\030\002" +
-      " \001(\021\022\025\n\rblocks_placed\030\003 \001(\021\022\025\n\rblocked_m" +
-      "ined\030\004 \001(\021\022\r\n\005joins\030\005 \001(\021\022\024\n\014damage_deal" +
-      "t\030\006 \001(\001\022\024\n\014damage_taken\030\007 \001(\001\022\025\n\ritems_d" +
-      "ropped\030\010 \001(\021\"*\n\nTyped_Kill\022\014\n\004type\030\001 \001(\t" +
-      "\022\016\n\006amount\030\002 \001(\021\"2\n\005Kills\022\r\n\005total\030\001 \001(\021" +
-      "\022\032\n\005typed\030\002 \003(\0132\013.Typed_Kill\"H\n\013Server_I" +
-      "nfo\022\026\n\016online_players\030\001 \001(\021\022\023\n\013max_playe" +
-      "rs\030\002 \001(\021\022\014\n\004name\030\003 \001(\t\"-\n\022PlayerStatsReq" +
-      "uest\022\027\n\006player\030\001 \001(\0132\007.Player\"I\n\027StatsCo" +
-      "nnectionResponse\022\027\n\006player\030\001 \001(\0132\007.Playe" +
-      "r\022\025\n\005stats\030\002 \001(\0132\006.Stats\"\007\n\005Empty2\240\001\n\016Co" +
-      "mmunications\022\'\n\010GetStats\022\023.PlayerStatsRe" +
-      "quest\032\006.Stats\022%\n\rGetServerInfo\022\006.Empty\032\014" +
-      ".Server_Info\022>\n\030EstablishStatsConnection" +
-      "\022\006.Empty\032\030.StatsConnectionResponse0\001B\034\n\032" +
-      "me.endergaming.common.grpcb\006proto3"
+      "\n\023communication.proto\032\033google/protobuf/e" +
+      "mpty.proto\032\036google/protobuf/wrappers.pro" +
+      "to\"A\n\004UUID\022\033\n\023mostSignificantBits\030\001 \001(\022\022" +
+      "\034\n\024leastSignificantBits\030\002 \001(\022\"\024\n\004Text\022\014\n" +
+      "\004text\030\001 \001(\t\"+\n\006Player\022\023\n\004uuid\030\001 \001(\0132\005.UU" +
+      "ID\022\014\n\004name\030\002 \001(\t\"\256\001\n\005Stats\022\025\n\005kills\030\001 \001(" +
+      "\0132\006.Kills\022\016\n\006deaths\030\002 \001(\021\022\025\n\rblocks_plac" +
+      "ed\030\003 \001(\021\022\025\n\rblocked_mined\030\004 \001(\021\022\r\n\005joins" +
+      "\030\005 \001(\021\022\024\n\014damage_dealt\030\006 \001(\001\022\024\n\014damage_t" +
+      "aken\030\007 \001(\001\022\025\n\ritems_dropped\030\010 \001(\021\"*\n\nTyp" +
+      "ed_Kill\022\014\n\004type\030\001 \001(\t\022\016\n\006amount\030\002 \001(\021\"2\n" +
+      "\005Kills\022\r\n\005total\030\001 \001(\021\022\032\n\005typed\030\002 \003(\0132\013.T" +
+      "yped_Kill\"H\n\013Server_Info\022\026\n\016online_playe" +
+      "rs\030\001 \001(\021\022\023\n\013max_players\030\002 \001(\021\022\014\n\004name\030\003 " +
+      "\001(\t\"-\n\022PlayerStatsRequest\022\027\n\006player\030\001 \001(" +
+      "\0132\007.Player\"I\n\027StatsConnectionResponse\022\027\n" +
+      "\006player\030\001 \001(\0132\007.Player\022\025\n\005stats\030\002 \001(\0132\006." +
+      "Stats\"\317\001\n\006Number\022,\n\005int32\030\001 \001(\0132\033.google" +
+      ".protobuf.Int32ValueH\000\022,\n\005int64\030\002 \001(\0132\033." +
+      "google.protobuf.Int64ValueH\000\022.\n\007float32\030" +
+      "\003 \001(\0132\033.google.protobuf.FloatValueH\000\022/\n\007" +
+      "float64\030\004 \001(\0132\034.google.protobuf.DoubleVa" +
+      "lueH\000B\010\n\006number\"\273\001\n\005Value\0224\n\014string_valu" +
+      "e\030\001 \001(\0132\034.google.protobuf.StringValueH\000\022" +
+      "\037\n\014number_value\030\002 \001(\0132\007.NumberH\000\0220\n\nbool" +
+      "_value\030\003 \001(\0132\032.google.protobuf.BoolValue" +
+      "H\000\022 \n\nstats_list\030\004 \001(\0132\n.MultiStatH\000B\007\n\005" +
+      "value\"*\n\004Stat\022\013\n\003key\030\001 \001(\t\022\025\n\005value\030\002 \001(" +
+      "\0132\006.Value\"!\n\tMultiStat\022\024\n\005stats\030\001 \003(\0132\005." +
+      "Stat\">\n\022StatStreamResponse\022\r\n\005owner\030\001 \001(" +
+      "\t\022\031\n\005stats\030\002 \001(\0132\n.MultiStat\"\007\n\005Empty2\341\001" +
+      "\n\016Communications\022\'\n\010GetStats\022\023.PlayerSta" +
+      "tsRequest\032\006.Stats\022%\n\rGetServerInfo\022\006.Emp" +
+      "ty\032\014.Server_Info\022>\n\030EstablishStatsConnec" +
+      "tion\022\006.Empty\032\030.StatsConnectionResponse0\001" +
+      "\022?\n\036EstablishCustomStatsConnection\022\006.Emp" +
+      "ty\032\023.StatStreamResponse0\001B\034\n\032me.endergam" +
+      "ing.common.grpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6952,6 +11966,8 @@ public final class Communication {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.EmptyProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_UUID_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -7007,12 +12023,44 @@ public final class Communication {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_StatsConnectionResponse_descriptor,
         new java.lang.String[] { "Player", "Stats", });
-    internal_static_Empty_descriptor =
+    internal_static_Number_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_Number_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Number_descriptor,
+        new java.lang.String[] { "Int32", "Int64", "Float32", "Float64", "Number", });
+    internal_static_Value_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_Value_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Value_descriptor,
+        new java.lang.String[] { "StringValue", "NumberValue", "BoolValue", "StatsList", "Value", });
+    internal_static_Stat_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_Stat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Stat_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_MultiStat_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_MultiStat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_MultiStat_descriptor,
+        new java.lang.String[] { "Stats", });
+    internal_static_StatStreamResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_StatStreamResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_StatStreamResponse_descriptor,
+        new java.lang.String[] { "Owner", "Stats", });
+    internal_static_Empty_descriptor =
+      getDescriptor().getMessageTypes().get(14);
     internal_static_Empty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Empty_descriptor,
         new java.lang.String[] { });
+    com.google.protobuf.EmptyProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

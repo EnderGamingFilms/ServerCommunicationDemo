@@ -16,7 +16,7 @@ import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class CommunicationImpl extends CommunicationsGrpc.CommunicationsImplBase {
-    private final List<StreamObserver<Communication.StatsConnectionResponse>> statsObservers = new CopyOnWriteArrayList<>();
+    private final List<StreamObserver<Communication.StatStreamResponse>> statsObservers = new CopyOnWriteArrayList<>();
 
     @Override
     public void getStats(Communication.PlayerStatsRequest request, StreamObserver<Communication.Stats> responseObserver) {
@@ -51,6 +51,15 @@ public class CommunicationImpl extends CommunicationsGrpc.CommunicationsImplBase
 
     @Override
     public void establishStatsConnection(Communication.Empty request, StreamObserver<Communication.StatsConnectionResponse> responseObserver) {
+//        var observer = (ServerCallStreamObserver<?>) responseObserver;
+//        observer.setOnCancelHandler(() -> this.statsObservers.remove(responseObserver));
+//
+//        this.statsObservers.add(responseObserver);
+        System.out.println("Deprecated Action -- EstablishStatsConnection");
+    }
+
+    @Override
+    public void establishCustomStatsConnection(Communication.Empty request, StreamObserver<Communication.StatStreamResponse> responseObserver) {
         var observer = (ServerCallStreamObserver<?>) responseObserver;
         observer.setOnCancelHandler(() -> this.statsObservers.remove(responseObserver));
 
@@ -58,7 +67,7 @@ public class CommunicationImpl extends CommunicationsGrpc.CommunicationsImplBase
     }
 
     public void notifyStatsUpdate(Player p, Stats stats) {
-        var responseMessage = MessageBuilder.buildStatsConnectionResponse(p.getUniqueId(), p.getName(), stats);
+        var responseMessage = MessageBuilder.buildStatStreamResponse(p.getName(), stats);
 
         System.out.println("Sending stats update to " + this.statsObservers.size() + " observers");
 

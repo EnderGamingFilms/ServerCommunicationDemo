@@ -123,6 +123,38 @@ public final class CommunicationsGrpc {
      return getEstablishStatsConnectionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Empty,
+      me.endergaming.common.grpc.Communication.StatStreamResponse> getEstablishCustomStatsConnectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EstablishCustomStatsConnection",
+      requestType = me.endergaming.common.grpc.Communication.Empty.class,
+      responseType = me.endergaming.common.grpc.Communication.StatStreamResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Empty,
+      me.endergaming.common.grpc.Communication.StatStreamResponse> getEstablishCustomStatsConnectionMethod() {
+    io.grpc.MethodDescriptor<me.endergaming.common.grpc.Communication.Empty, me.endergaming.common.grpc.Communication.StatStreamResponse> getEstablishCustomStatsConnectionMethod;
+    if ((getEstablishCustomStatsConnectionMethod = CommunicationsGrpc.getEstablishCustomStatsConnectionMethod) == null) {
+      synchronized (CommunicationsGrpc.class) {
+        if ((getEstablishCustomStatsConnectionMethod = CommunicationsGrpc.getEstablishCustomStatsConnectionMethod) == null) {
+          CommunicationsGrpc.getEstablishCustomStatsConnectionMethod = getEstablishCustomStatsConnectionMethod = 
+              io.grpc.MethodDescriptor.<me.endergaming.common.grpc.Communication.Empty, me.endergaming.common.grpc.Communication.StatStreamResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "Communications", "EstablishCustomStatsConnection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  me.endergaming.common.grpc.Communication.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  me.endergaming.common.grpc.Communication.StatStreamResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new CommunicationsMethodDescriptorSupplier("EstablishCustomStatsConnection"))
+                  .build();
+          }
+        }
+     }
+     return getEstablishCustomStatsConnectionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -171,6 +203,13 @@ public final class CommunicationsGrpc {
       asyncUnimplementedUnaryCall(getEstablishStatsConnectionMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void establishCustomStatsConnection(me.endergaming.common.grpc.Communication.Empty request,
+        io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.StatStreamResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getEstablishCustomStatsConnectionMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -194,6 +233,13 @@ public final class CommunicationsGrpc {
                 me.endergaming.common.grpc.Communication.Empty,
                 me.endergaming.common.grpc.Communication.StatsConnectionResponse>(
                   this, METHODID_ESTABLISH_STATS_CONNECTION)))
+          .addMethod(
+            getEstablishCustomStatsConnectionMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                me.endergaming.common.grpc.Communication.Empty,
+                me.endergaming.common.grpc.Communication.StatStreamResponse>(
+                  this, METHODID_ESTABLISH_CUSTOM_STATS_CONNECTION)))
           .build();
     }
   }
@@ -239,6 +285,14 @@ public final class CommunicationsGrpc {
       asyncServerStreamingCall(
           getChannel().newCall(getEstablishStatsConnectionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void establishCustomStatsConnection(me.endergaming.common.grpc.Communication.Empty request,
+        io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.StatStreamResponse> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getEstablishCustomStatsConnectionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -280,6 +334,14 @@ public final class CommunicationsGrpc {
       return blockingServerStreamingCall(
           getChannel(), getEstablishStatsConnectionMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public java.util.Iterator<me.endergaming.common.grpc.Communication.StatStreamResponse> establishCustomStatsConnection(
+        me.endergaming.common.grpc.Communication.Empty request) {
+      return blockingServerStreamingCall(
+          getChannel(), getEstablishCustomStatsConnectionMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -320,6 +382,7 @@ public final class CommunicationsGrpc {
   private static final int METHODID_GET_STATS = 0;
   private static final int METHODID_GET_SERVER_INFO = 1;
   private static final int METHODID_ESTABLISH_STATS_CONNECTION = 2;
+  private static final int METHODID_ESTABLISH_CUSTOM_STATS_CONNECTION = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -349,6 +412,10 @@ public final class CommunicationsGrpc {
         case METHODID_ESTABLISH_STATS_CONNECTION:
           serviceImpl.establishStatsConnection((me.endergaming.common.grpc.Communication.Empty) request,
               (io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.StatsConnectionResponse>) responseObserver);
+          break;
+        case METHODID_ESTABLISH_CUSTOM_STATS_CONNECTION:
+          serviceImpl.establishCustomStatsConnection((me.endergaming.common.grpc.Communication.Empty) request,
+              (io.grpc.stub.StreamObserver<me.endergaming.common.grpc.Communication.StatStreamResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -414,6 +481,7 @@ public final class CommunicationsGrpc {
               .addMethod(getGetStatsMethod())
               .addMethod(getGetServerInfoMethod())
               .addMethod(getEstablishStatsConnectionMethod())
+              .addMethod(getEstablishCustomStatsConnectionMethod())
               .build();
         }
       }
